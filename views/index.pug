@@ -1,0 +1,45 @@
+h1 book list
+h2 Books
+//- ul  
+//-  each book in list
+//-   li= book.title
+//-   li= book.description
+
+each book in list
+        ul
+          li
+           span Title:&nbsp
+           = book.title 
+          
+           span &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+           a(href="/" + book.id) view 
+          li
+           span ID:&nbsp
+           = book.id
+           div
+           a(href="/" + book.id + "/delete") delete
+          
+            
+          
+         
+          
+h2 Create Book
+form(action="/" method="POST")
+      div
+        input(type="text" name="title" required="required")
+        label(for="tittle") Title
+      div 
+        input(type="text" name="description" required="required")
+        label(for="tittle") Description
+      div  
+       button(type="submit") Create
+h2 Update Title
+form(action="/update" method="POST")
+      div
+        input(type="text" name="id" required="required")
+        label(for="update") ID
+      div 
+        input(type="text" name="title" required="required")
+        label(for="update") New Title
+      div  
+       button(type="submit") Update
