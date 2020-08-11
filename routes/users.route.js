@@ -7,8 +7,8 @@ const shortid = require('shortid')
 db.defaults({ user: [] })
   .write()
 
-router.get('/users/index',(req,res)=>{
-  res.render('/users/index',{
+router.get('/index',(req,res)=>{
+  res.render('users/index',{
     
   })
 })
