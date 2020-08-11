@@ -16,7 +16,7 @@ router.get('/index',(req,res)=>{
   })
 })
 
-router.get("/index/:id/delete", function(req, res) {
+router.get("/index/delete/:id", function(req, res) {
    var id = req.params.id;
    var users = db.get('users').find({id:id}).value()
     db.get("users")
