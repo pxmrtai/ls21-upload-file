@@ -9,11 +9,9 @@ db.defaults({ user: [] })
 
 router.get('/index',(req,res)=>{
   res.render('users/index',{
-    
+    userList : db.get('user').value()
   })
 })
-
-
 
 
 module.exports = router;
