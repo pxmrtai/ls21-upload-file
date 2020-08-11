@@ -3,8 +3,9 @@ var router = epxress.Router();
 const db = require('../db')
 const shortid = require('shortid')
 const bodyParser = require('body-parser')
-app.use(bodyParser.json()) // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
+router.use(bodyParser.json()) // for parsing application/json
+router.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 // Set some defaults (required if your JSON file is empty)
 db.defaults({ user: [] })
   .write()
@@ -15,10 +16,10 @@ router.get('/index',(req,res)=>{
   })
 })
 router.post('/index',(req,res)=>{
-  res.render('user/index',{
-     
-   
-  })
+    req.body.id = shortid.generate();
+
+    db.get('user').push(req.body).write()
+    res.redirect('/users/index')
 })
 
 module.exports = router;

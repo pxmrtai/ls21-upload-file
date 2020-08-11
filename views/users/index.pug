@@ -1,12 +1,9 @@
 h1 user
 
-form(action="/" method="POST")
-      
-      div 
-        input(type="text" name="name" required="required")
-        label(for="user") New User
-      div  
-       button(type="submit") Create
+form(action="/users/index", method="POST")
+ label name
+ input(type="text",name='name')
+ button make
 ul 
  each user in userList
   li
