@@ -4,11 +4,9 @@ const port = 5000
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 const shortid = require('shortid');
-var userRoute = require('./routes/users.route');
-
 const adapter = new FileSync('db.json')
 const db = low(adapter)
-
+var userRoute = require('./routes/users.route');
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.json()) // for parsing application/json

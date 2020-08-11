@@ -8,7 +8,9 @@ db.defaults({ user: [] })
   .write()
 
 router.get('/users/index',(req,res)=>{
-  res.send('hello')
+  res.render('/users/index',{
+    
+  })
 })
 
 
