@@ -17,7 +17,7 @@ router.get('/index',(req,res)=>{
 })
 router.get('/:id',(req,res)=>{
     var id = req.params.id;
-    var user = db.get('user').find({id:id}).value()
+    var user = db.get('user').find({id:id}).value();
     res.render('/users/view',{
         list: user
     })
