@@ -1,3 +1,13 @@
 h1 user
 
-p= userList.name
+form(action="/" method="POST")
+      
+      div 
+        input(type="text" name="name" required="required")
+        label(for="user") New User
+      div  
+       button(type="submit") Create
+ul 
+ each user in userList
+  li
+   span= user.name
