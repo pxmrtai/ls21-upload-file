@@ -3,7 +3,8 @@ const app = express()
 const port = 5000
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
-const shortid = require('shortid')
+const shortid = require('shortid');
+var userRoute = require('./routes/users.route');
 
 const adapter = new FileSync('db.json')
 const db = low(adapter)
@@ -55,7 +56,7 @@ app.post('/update',(req,res)=>{
 })
 
 
-
+app.use('/users', userRoute)
 
 
 // listen for requests :)
