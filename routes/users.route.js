@@ -30,7 +30,7 @@ router.get("/index/:id/delete", function(req, res) {
  res.redirect('/users/index')
 })
 
-router.get('/index',(req,res)=>{
+router.post('/index',(req,res)=>{
     req.body.id = shortid.generate();
 
     db.get('user').push(req.body).write()
