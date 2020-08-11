@@ -8,3 +8,6 @@ ul
  each user in userList
   li
    span= user.name
+   div
+   a(href="/index" + user.id + "/delete") delete
+          

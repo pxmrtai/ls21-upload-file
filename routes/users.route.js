@@ -15,6 +15,18 @@ router.get('/index',(req,res)=>{
     userList : db.get('user').value()
   })
 })
+
+router.get("/index/:id/delete", function(req, res) {
+   var id = req.params.id;
+   var users = db.get('users').find({id:id}).value()
+    db.get("users")
+     .remove({ id: req.params.id})
+     .write()
+    
+ res.redirect('/users/index')
+   console.log(req.params.id)
+})
+
 router.post('/index',(req,res)=>{
     req.body.id = shortid.generate();
 
