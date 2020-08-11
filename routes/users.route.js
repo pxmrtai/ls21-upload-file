@@ -16,21 +16,22 @@ router.get('/index',(req,res)=>{
   })
 })
 
-router.get("/index/delete/:id", function(req, res) {
+router.post("/index/delete/:id", function(req, res) {
    var id = req.params.id;
-   var users = db.get('users').find({id:id}).value()
-    db.get("users")
+   var users = db.get('user').find({id:id}).value()
+    db.get("user")
      .remove({ id:id})
      .write()
-    
+   
  res.redirect('/users/index')
    
 })
 
-router.post('/index',(req,res)=>{
+router.get('/index',(req,res)=>{
     req.body.id = shortid.generate();
 
     db.get('user').push(req.body).write()
+  
     res.redirect('/users/index')
 })
 
