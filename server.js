@@ -31,7 +31,7 @@ app.get('/:id',(req,res)=>{
     })
 })
 app.get("/:id/delete", function(req, res) {
-    db.get("list")
+     db.get("list")
      .remove({ id: req.params.id})
      .write()
      

@@ -16,15 +16,12 @@ router.get('/index',(req,res)=>{
   })
 })
 
-router.post("/index/delete/:id", function(req, res) {
-   var id = req.params.id;
-   var users = db.get('user').find({id:id}).value()
-    db.get("user")
-     .remove({ id:id})
+router.get("/index/delete/:id", function(req, res) {
+     db.get("user")
+     .remove({ id: req.params.id})
      .write()
-   
- res.redirect('/users/index')
-   
+     
+ res.redirect('/index')
 })
 
 router.get('/index',(req,res)=>{
