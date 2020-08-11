@@ -15,13 +15,19 @@ router.get('/index',(req,res)=>{
     userList : db.get('user').value()
   })
 })
-
-router.get("/index/delete/:id", function(req, res) {
+router.get('/:id',(req,res)=>{
+    var id = req.params.id;
+    var user = db.get('user').find({id:id}).value()
+    res.render('/users/view',{
+        list: user
+    })
+})
+router.get("/index/:id/delete", function(req, res) {
      db.get("user")
      .remove({ id: req.params.id})
      .write()
      
- res.redirect('/index')
+ res.redirect('/users/index')
 })
 
 router.get('/index',(req,res)=>{

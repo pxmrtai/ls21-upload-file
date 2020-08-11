@@ -8,6 +8,7 @@ ul
  each user in userList
   li
    span= user.name
+   a(href="/" + user.id) view 
    div
-   a(href="/index/delete/" + user.id) delete
+   a(href="/index/" + user.id+"/delete") delete
           
