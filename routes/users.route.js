@@ -20,11 +20,11 @@ router.get("/index/delete/:id", function(req, res) {
    var id = req.params.id;
    var users = db.get('users').find({id:id}).value()
     db.get("users")
-     .remove({ id: req.params.id})
+     .remove({ id:id})
      .write()
     
  res.redirect('/users/index')
-   console.log(req.params.id)
+   
 })
 
 router.post('/index',(req,res)=>{
