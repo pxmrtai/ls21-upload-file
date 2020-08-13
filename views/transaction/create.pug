@@ -1,14 +1,13 @@
 h1 create
 
+form(action="")
+  form
+    select
+      each val in listBook
+       option(value=val.title)= val.title
 
-form
-  select
-    each val in listBook
-     option(value=val.title)= val.title
-   
   
-form
-  select
-    each user in listUser
-     option(value=user.name)= user.name
-     
+  form
+    select
+      each user in listUser
+       option(value=user.name)= user.name
