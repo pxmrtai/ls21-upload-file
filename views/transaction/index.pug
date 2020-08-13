@@ -1,21 +1,20 @@
 h1 List Transactions
 
 a(href="/transaction/create") Create New Transactions
-table
-    tr
-        th TransactionID
-        th UserName
-        th Book Title
-        
-    each transaction in rentalList
-        tr
-                td= transaction.id
-                
-                td
-                    each user in listUser
-                      if user.id == transaction.userId
-                        span= user.name
-                td 
-                    each book in listBook
-                      if book.id == transaction.bookId
-                        span= book.title
+
+each item in rentalList
+        ul
+          li
+             span Name:&nbsp
+             = item.userId
+          li
+           span Book:&nbsp
+           = item.bookId 
+          
+           span &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+           
+          
+           
+          
+            
+          
