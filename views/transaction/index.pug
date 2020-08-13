@@ -7,14 +7,15 @@ table
         th UserName
         th Book Title
         
-    each transaction in transactions
+    each transaction in rentalList
         tr
                 td= transaction.id
+                
                 td
-                    each user in users
+                    each user in listUser
                       if user.id == transaction.userId
                         span= user.name
                 td 
-                    each book in books
+                    each book in listBook
                       if book.id == transaction.bookId
                         span= book.title
