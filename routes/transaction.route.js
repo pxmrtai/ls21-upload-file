@@ -9,7 +9,11 @@ router.use(bodyParser.urlencoded({ extended: true })) // for parsing application
 // Set some defaults (required if your JSON file is empty)
 db.defaults({ rentalList: [] })
   .write()
-
+router.get("/index",(req,res)=>{
+  res.render("transaction/index",{
+    
+  })
+})
 router.get("/create",(req,res)=>{
   res.render("transaction/create",{
      listBook : db.get("list").value(),
@@ -20,6 +24,11 @@ router.get("/create",(req,res)=>{
   
 })
 
+router.post('/index',(req,res)=>{
+    req.body.id = shortid.generate();
 
+    db.get('rentalList').push(req.body).write()
+    res.redirect('/create')
+})
 
 module.exports= router;

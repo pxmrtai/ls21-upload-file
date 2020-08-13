@@ -1,6 +1,6 @@
 h1 create
 
-form(action="")
+form(action="/users/index", method="POST")
   form
     select
       each val in listBook
@@ -11,3 +11,4 @@ form(action="")
     select
       each user in listUser
        option(value=user.name)= user.name
+  button(type="submit") make
