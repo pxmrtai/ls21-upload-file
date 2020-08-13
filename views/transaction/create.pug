@@ -4,9 +4,10 @@ h1 create
 form
   select
     each val in listBook
-     option(value=val.name)= val.name
+     option(value=val.title)= val.title
    
   
 form
   select
-    option(value="a") a
+    each user in listUser
+     option(value=user.name)= user.name
