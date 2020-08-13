@@ -11,13 +11,15 @@ db.defaults({ rentalList: [] })
   .write()
 router.get("/index",(req,res)=>{
   res.render("transaction/index",{
-     userList : db.get('user').value()
+     rentalList : db.get('rentalList').value()
   })
 })
+
 router.get("/create",(req,res)=>{
   res.render("transaction/create",{
      listBook : db.get("list").value(),
-     listUser : db.get("user").value()
+     listUser : db.get("user").value(),
+     rentalList : db.get('rentalList').value()
    
     
   })
@@ -25,11 +27,11 @@ router.get("/create",(req,res)=>{
 })
 
 
-router.post('/index',(req,res)=>{
+router.post('/create',(req,res)=>{
     req.body.id = shortid.generate();
 
     db.get('rentalList').push(req.body).write()
-    res.redirect('/create')
+    res.redirect('create')
 })
 
 module.exports= router;

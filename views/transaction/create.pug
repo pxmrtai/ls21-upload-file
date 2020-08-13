@@ -1,14 +1,18 @@
 h1 create
 
-form(action="/users/index", method="POST")
-  form
+ul
+ each items in rentalList
+  li= items.userName
+
+form(action="/transaction/index", method="POST")
+  div
     select
       each val in listBook
        option(value=val.title name="userName")= val.title
 
   
-  form
+  div
     select
       each user in listUser
        option(value=user.name name="bookName")= user.name
-  button(type="submit") make
+  input(type="submit")
