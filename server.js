@@ -56,7 +56,7 @@ app.post('/',(req,res)=>{
     req.body.id = shortid.generate();
 
     db.get('list').push(req.body).write()
-    res.redirect('/')
+    res.redirect('/book')
 })
 app.post('/update',(req,res)=>{
     db.get('list')

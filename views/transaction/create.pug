@@ -4,7 +4,7 @@ ul
  each items in rentalList
   li= items.userName
 
-form(action="/transaction/index", method="POST")
+form(action="/transaction/create", method="POST")
   div
     select
       each val in listBook

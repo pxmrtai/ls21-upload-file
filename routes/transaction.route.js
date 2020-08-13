@@ -31,7 +31,7 @@ router.post('/create',(req,res)=>{
     req.body.id = shortid.generate();
 
     db.get('rentalList').push(req.body).write()
-    res.redirect('create')
+    res.redirect('/transaction/create')
 })
 
 module.exports= router;
