@@ -4,6 +4,8 @@ const db = require('../db')
 const shortid = require('shortid')
 const bodyParser = require('body-parser')
 
+var controller = require('../controller/users.controller')
+
 router.use(bodyParser.json()) // for parsing application/json
 router.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 // Set some defaults (required if your JSON file is empty)
