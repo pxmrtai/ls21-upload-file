@@ -3,16 +3,17 @@ h1 create
 ul
  each items in rentalList
   li= items.userName
+ 
 
 form(action="/transaction/create", method="POST")
   div
     select
       each val in listBook
-       option(value=val.title name="userName")= val.title
+       option(value=val.title ,name="userName")= val.title
 
   
   div
     select
       each user in listUser
-       option(value=user.name name="bookName")= user.name
+       option(value=user.name ,name="bookName")= user.name
   input(type="submit")

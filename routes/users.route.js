@@ -34,7 +34,7 @@ router.post('/index',(req,res)=>{
     req.body.id = shortid.generate();
 
     db.get('user').push(req.body).write()
-  
+    console.log(req.body)
     res.redirect('/users/index')
 })
 
