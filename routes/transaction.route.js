@@ -16,7 +16,7 @@ router.get("/collection",(req,res)=>{
 })
 router.get("/create",(req,res)=>{
   res.render("transaction/create",{
-    
+     listBook : db.get('list').value()
   })
 })
 

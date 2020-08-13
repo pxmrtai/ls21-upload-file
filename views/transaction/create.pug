@@ -3,9 +3,10 @@ h1 create
 
 form
   select
-   option(value="a") a
-   option(value="a") b
-   option(value="a") a
-   option(value="a") c
+    each val in listBook
+     option(value=val.name)= val.name
    
   
+form
+  select
+    option(value="a") a
