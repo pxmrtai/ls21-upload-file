@@ -28,7 +28,7 @@ router.get("/create",(req,res)=>{
 
 router.post('/create',(req,res)=>{
     req.body.id = shortid.generate();
-   
+    console.log(req.body)
     db.get('rentalList').push(req.body).write()
     res.redirect('/transaction/index')
 })

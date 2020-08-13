@@ -64,7 +64,7 @@ app.post('/update',(req,res)=>{
     .find({ id:  req.body.id })
     .assign({title: req.body.title})
     .write()
-    res.redirect('/')
+    res.redirect('/book')
 })
 
 
