@@ -24,7 +24,7 @@ app.get('/',(req,res) => {
     })
 })
 app.get('/book',(req,res)=>{               
-    res.render('index',{
+    res.render('book',{
        list : db.get('list').value()
     })
 }
