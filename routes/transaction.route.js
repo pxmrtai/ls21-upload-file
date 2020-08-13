@@ -16,16 +16,14 @@ router.get("/collection",(req,res)=>{
 })
 router.get("/create",(req,res)=>{
   res.render("transaction/create",{
-     listBook : db.get("list").value()
-    
-    
-  })
-   res.render("transaction/create",{
+     listBook : db.get("list").value(),
      listUser : db.get("user").value()
-    
+   
     
   })
+  
 })
+
 
 
 module.exports= router;
