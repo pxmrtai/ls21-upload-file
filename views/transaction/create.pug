@@ -3,13 +3,13 @@ h1 create
 
 form(action="/transaction/create", method="POST")
   div
-    select
+    select(name= "bookid")
       each val in listBook
        option(value=val.title)= val.title
 
   
   div
-    select
+    select(name= "userid")
       each user in listUser
        option(value=user.name)= user.name
   button(type="submit") Gửi
