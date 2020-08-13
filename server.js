@@ -23,6 +23,12 @@ app.get('/',(req,res) => {
        list : db.get('list').value()
     })
 })
+app.get('/book',(req,res)=>{               
+    res.render('index',{
+       list : db.get('list').value()
+    })
+}
+)
 // app.get('/users/index',(req,res) => {
 //     res.render('users/index',{
 //        listUser : db.get('user').value()
