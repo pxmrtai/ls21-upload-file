@@ -9,8 +9,16 @@ router.use(bodyParser.urlencoded({ extended: true })) // for parsing application
 // Set some defaults (required if your JSON file is empty)
 db.defaults({ rentalList: [] })
   .write()
-router.get("/",(req,res)=>{
-  res.send("hello")
+router.get("/collection",(req,res)=>{
+  res.render("transaction/collection",{
+    
+  })
 })
+router.get("/create",(req,res)=>{
+  res.render("transaction/create",{
+    
+  })
+})
+
 
 module.exports= router;
