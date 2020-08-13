@@ -4,7 +4,7 @@ const db = require('../db')
 const shortid = require('shortid')
 const bodyParser = require('body-parser')
 
-var controller = require('../controller/users.controller')
+var controller = require('../controller/user.controller')
 
 router.use(bodyParser.json()) // for parsing application/json
 router.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
