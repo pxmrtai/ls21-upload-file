@@ -4,6 +4,8 @@ form(action="/users/index", method="POST")
  label name
  input(type="text",name='name', required="required")
  button make
+ 
+
 ul 
  each user in userList
   li
@@ -11,4 +13,14 @@ ul
    a(href="/users/" + user.id) view 
    div
    a(href="/users/index/" + user.id+"/delete") delete
+   
+   
+div
+div
+div
+a(href="/") BACK HOME
+   
+   
+   
+   
           

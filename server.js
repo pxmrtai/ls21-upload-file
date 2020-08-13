@@ -7,6 +7,7 @@ const shortid = require('shortid');
 const adapter = new FileSync('db.json')
 const db = low(adapter)
 var userRoute = require('./routes/users.route');
+var transaction = require('./routes/transaction.route')
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.json()) // for parsing application/json
@@ -67,7 +68,7 @@ app.post('/update',(req,res)=>{
 
 
 app.use('/users', userRoute)
-
+app.use('/transaction', transaction)
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
