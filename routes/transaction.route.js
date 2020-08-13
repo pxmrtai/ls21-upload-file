@@ -11,7 +11,7 @@ db.defaults({ rentalList: [] })
   .write()
 router.get("/index",(req,res)=>{
   res.render("transaction/index",{
-    
+     userList : db.get('user').value()
   })
 })
 router.get("/create",(req,res)=>{
@@ -23,6 +23,7 @@ router.get("/create",(req,res)=>{
   })
   
 })
+
 
 router.post('/index',(req,res)=>{
     req.body.id = shortid.generate();
