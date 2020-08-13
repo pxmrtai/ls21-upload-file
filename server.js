@@ -17,12 +17,17 @@ app.set('views', './views')
 // Set some defaults (required if your JSON file is empty)
 db.defaults({ list: [] })
   .write()
-
+ 
 app.get('/',(req,res) => {
     res.render('index',{
        list : db.get('list').value()
     })
 })
+// app.get('/users/index',(req,res) => {
+//     res.render('users/index',{
+//        listUser : db.get('user').value()
+//     })
+// })
 app.get('/:id',(req,res)=>{
     var id = req.params.id;
     var book = db.get('list').find({id:id}).value()
