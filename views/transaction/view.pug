@@ -4,7 +4,15 @@ h1 status of rental list
 .userName Name of user: #{ rentalList.userId}
 
 .status-of-rental 
- input(type="radio" id="return" name="status" value="returned")
- lable(for="male") returned
+ p status:
+ input(type="radio" id="return" name="status" value="returned" )
+ lable(for="return") Returned
+ span &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+ input(type="radio" id="renting" name="status" value="renting")
+ lable(for="renting") Renting
+ br 
+ br
+ br
+a(href="/transaction/index") RENTAL LIST
 
 
