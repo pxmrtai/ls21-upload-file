@@ -16,7 +16,8 @@ module.exports.createRentalList =(req,res)=>{
   res.render("transaction/create",{
      listBook : db.get("list").value(),
      listUser : db.get("user").value(),
-     status : db.get("rentalList").value()
+     status : db.get("rentalList").value(),
+     rentalList: db.get("rentalList").value()
   })
   
 }
@@ -24,7 +25,8 @@ module.exports.view = (req,res)=>{
     var rentalid = req.params.id;
     var rental = db.get('rentalList').find({id:rentalid}).value()
     res.render('transaction/view',{
-        rentalList: rental
+        rentalList: rental,
+        list: db.get("rentalList").value
     })
 }
 

@@ -1,12 +1,14 @@
 h1 status of rental list 
 
-h1 ID : #{rentalList.id}
+h1 Name of Book : #{rentalList.bookId}
+h1 Name of User : #{rentalList.userId}
+
 
 
 form(action="/transaction/update" method="POST")
       div
-        input(type="text" name="id" required="required")
-        label(for="update") ID
+        input(type="text" name="id" value= rentalList.id)
+        label(for="update" value=rentalList.id) ID
       div
         select(name="status" )
          option(value= "isComplete") isCompelete
