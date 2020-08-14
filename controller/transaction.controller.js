@@ -41,5 +41,7 @@ module.exports.update = (req,res)=>{
     .assign({status: req.body.status})
     .write()
   console.log(req.body)
+  console.log(req.body.id)
+  console.log(req.body.status)
     res.redirect('/transaction/index')
 }

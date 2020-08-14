@@ -60,5 +60,12 @@
       "id": "BImBY6sds"
     }
   ],
-  "rentalList": []
+  "rentalList": [
+    {
+      "bookId": "cooking",
+      "userId": "player1",
+      "status": "isComplete",
+      "id": "Bdzu5Q9Ot"
+    }
+  ]
 }
