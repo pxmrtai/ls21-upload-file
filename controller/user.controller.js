@@ -10,7 +10,7 @@ module.exports.view = (req,res)=>{
     var id = req.params.id;
     var user = db.get('user').find({id:id}).value();
     res.render('users/view',{
-        list: user
+        user: user
     })
 }
 module.exports.delete =  function(req, res) {

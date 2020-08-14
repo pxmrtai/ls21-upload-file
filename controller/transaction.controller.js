@@ -14,9 +14,9 @@ module.exports.rentalIndex = (req,res)=>{
 }
 module.exports.view = (req,res)=>{
     var rentalid = req.params.id;
-    var rentalList = db.get('rentalList').find({id:rentalid}).value()
+    var rental = db.get('rentalList').find({id:rentalid}).value()
     res.render('transaction/view',{
-        list: rentalList
+        list: rental
     })
 }
 module.exports.createRentalList =(req,res)=>{
