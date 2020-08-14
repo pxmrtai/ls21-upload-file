@@ -12,6 +12,13 @@ module.exports.rentalIndex = (req,res)=>{
      rentalList : db.get('rentalList').value()
   })
 }
+module.exports.view = (req,res)=>{
+    var id = req.params.id;
+    var book = db.get('list').find({id:id}).value()
+    res.render('view',{
+        list: book
+    })
+}
 module.exports.createRentalList =(req,res)=>{
   res.render("transaction/create",{
      listBook : db.get("list").value(),

@@ -11,6 +11,7 @@ router.use(bodyParser.urlencoded({ extended: true })) // for parsing application
 db.defaults({ rentalList: [] })
   .write()
 router.get("/index",controller.rentalIndex)
+router.get('/:id',controller.view)
 
 router.get("/create",controller.createRentalList)
 
