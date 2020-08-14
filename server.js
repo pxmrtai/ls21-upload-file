@@ -33,14 +33,8 @@ app.get("/:id/delete", controller.deleteBook)
 
 
 
-app.post('/',controller.)
-app.post('/update',(req,res)=>{
-    db.get('list')
-    .find({ id:  req.body.id })
-    .assign({title: req.body.title})
-    .write()
-    res.redirect('/book')
-})
+app.post('/',controller.postIndex)
+app.post('/update',controller.update)
 
 
 app.use('/users', userRoute)

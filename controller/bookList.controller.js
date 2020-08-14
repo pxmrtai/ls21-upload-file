@@ -23,11 +23,18 @@ module.exports.deleteBook =function(req, res) {
      .remove({ id: req.params.id})
      .write()
      
- res.redirect('/')
+ res.redirect('/book')
 }
 module.exports.postIndex = (req,res)=>{
     req.body.id = shortid.generate();
 
     db.get('list').push(req.body).write()
+    res.redirect('/book')
+}
+module.exports.update = (req,res)=>{
+    db.get('list')
+    .find({ id:  req.body.id })
+    .assign({title: req.body.title})
+    .write()
     res.redirect('/book')
 }

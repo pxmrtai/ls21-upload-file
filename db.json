@@ -3,21 +3,6 @@
     {
       "title": "cooking",
       "description": "this is comic book",
-      "id": "yQsc0kOST"
-    },
-    {
-      "title": "javascript2",
-      "description": "this is javascript book",
-      "id": "88cthTFgd"
-    },
-    {
-      "title": "akari",
-      "description": "this is Englishbook",
-      "id": "3zS-hNoET"
-    },
-    {
-      "title": "cooking",
-      "description": "this is comic book",
       "id": "ORQyfA13F"
     },
     {
@@ -34,6 +19,11 @@
       "title": "asd",
       "description": "this is cooking book",
       "id": "FMCDGsgXr"
+    },
+    {
+      "title": "dancing",
+      "description": "this is japanese book",
+      "id": "wkaxxjSUr"
     }
   ],
   "user": [
@@ -85,6 +75,11 @@
       "bookId": "cooking",
       "userId": "player1",
       "id": "bGORzManG"
+    },
+    {
+      "bookId": "asd",
+      "userId": "akari sakata",
+      "id": "gstD3NbOY"
     }
   ]
 }

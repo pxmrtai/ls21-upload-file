@@ -3,34 +3,18 @@ var router = epxress.Router();
 const db = require('../db')
 const shortid = require('shortid')
 const bodyParser = require('body-parser')
+var controller = require('../controller/transaction.controller')
 
 router.use(bodyParser.json()) // for parsing application/json
 router.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 // Set some defaults (required if your JSON file is empty)
 db.defaults({ rentalList: [] })
   .write()
-router.get("/index",(req,res)=>{
-  res.render("transaction/index",{
-      listBook : db.get("list").value(),
-     listUser : db.get("user").value(),
-     rentalList : db.get('rentalList').value()
-  })
-})
+router.get("/index",controller.rentalIndex)
 
-router.get("/create",(req,res)=>{
-  res.render("transaction/create",{
-     listBook : db.get("list").value(),
-     listUser : db.get("user").value(),
-  })
-  
-})
+router.get("/create",controller.createRentalList)
 
 
-router.post('/create',(req,res)=>{
-    req.body.id = shortid.generate();
-    console.log(req.body)
-    db.get('rentalList').push(req.body).write()
-    res.redirect('/transaction/index')
-})
+router.post('/create',controller.postCreateRentalList)
 
 module.exports= router;
