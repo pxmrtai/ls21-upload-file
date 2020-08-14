@@ -15,6 +15,9 @@ router.get("/index",controller.rentalIndex)
 router.get("/create",controller.createRentalList)
 
 
+
+
 router.post('/create',controller.postCreateRentalList)
+
 
 module.exports= router;
