@@ -8,7 +8,7 @@ const adapter = new FileSync('db.json')
 const db = low(adapter)
 var userRoute = require('./routes/users.route');
 var transaction = require('./routes/transaction.route')
-
+var controller = require ('./controller/bookList.controller')
 const bodyParser = require('body-parser')
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
@@ -19,16 +19,8 @@ app.set('views', './views')
 db.defaults({ list: [] })
   .write()
  
-app.get('/',(req,res) => {
-    res.render('index',{
-       list : db.get('list').value()
-    })
-})
-app.get('/book',(req,res)=>{               
-    res.render('book',{
-       list : db.get('list').value()
-    })
-}
+app.get('/',controller.index)
+app.get('/book',controller.listBook
 //         server
 )
 // app.get('/users/index',(req,res) => {
@@ -36,29 +28,12 @@ app.get('/book',(req,res)=>{
 //        listUser : db.get('user').value()
 //     })
 // })
-app.get('/:id',(req,res)=>{
-    var id = req.params.id;
-    var book = db.get('list').find({id:id}).value()
-    res.render('view',{
-        list: book
-    })
-})
-app.get("/:id/delete", function(req, res) {
-     db.get("list")
-     .remove({ id: req.params.id})
-     .write()
-     
- res.redirect('/')
-})
+app.get('/:id',controller.view)
+app.get("/:id/delete", controller.deleteBook)
 
 
 
-app.post('/',(req,res)=>{
-    req.body.id = shortid.generate();
-
-    db.get('list').push(req.body).write()
-    res.redirect('/book')
-})
+app.post('/',controller.)
 app.post('/update',(req,res)=>{
     db.get('list')
     .find({ id:  req.body.id })
