@@ -3,5 +3,8 @@ h1 status of rental list
 .bookName Name of book: #{rentalList.bookId}
 .userName Name of user: #{ rentalList.userId}
 
-.status-of-rental true
+.status-of-rental 
+ input(type="radio" id="return" name="status" value="returned")
+ lable(for="male") returned
+
 
