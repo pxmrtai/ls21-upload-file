@@ -12,6 +12,14 @@ module.exports.rentalIndex = (req,res)=>{
      rentalList : db.get('rentalList').value()
   })
 }
+module.exports.createRentalList =(req,res)=>{
+  res.render("transaction/create",{
+     listBook : db.get("list").value(),
+     listUser : db.get("user").value(),
+     status : db.get("rentalList").value()
+  })
+  
+}
 module.exports.view = (req,res)=>{
     var rentalid = req.params.id;
     var rental = db.get('rentalList').find({id:rentalid}).value()
@@ -19,16 +27,17 @@ module.exports.view = (req,res)=>{
         rentalList: rental
     })
 }
-module.exports.createRentalList =(req,res)=>{
-  res.render("transaction/create",{
-     listBook : db.get("list").value(),
-     listUser : db.get("user").value(),
-  })
-  
-}
+
 module.exports.postCreateRentalList = (req,res)=>{
     req.body.id = shortid.generate();
     
     db.get('rentalList').push(req.body).write()
     res.redirect('/transaction/index')
+}
+module.exports.update = (req,res)=>{
+    db.get('list')
+    .find({ id:  req.body.id })
+    .assign({title: req.body.title})
+    .write()
+    res.redirect('/book')
 }

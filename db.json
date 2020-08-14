@@ -60,26 +60,5 @@
       "id": "BImBY6sds"
     }
   ],
-  "rentalList": [
-    {
-      "bookId": "comic",
-      "userId": "player1",
-      "id": "cCpMC0cxB"
-    },
-    {
-      "bookId": "comic",
-      "userId": "player1",
-      "id": "Dzeu8ciL5"
-    },
-    {
-      "bookId": "cooking",
-      "userId": "player1",
-      "id": "bGORzManG"
-    },
-    {
-      "bookId": "asd",
-      "userId": "akari sakata",
-      "id": "gstD3NbOY"
-    }
-  ]
+  "rentalList": []
 }
