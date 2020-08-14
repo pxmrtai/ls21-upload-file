@@ -19,6 +19,9 @@ router.get("/create",controller.createRentalList)
 
 
 router.post('/create',controller.postCreateRentalList)
+router.post('/update',(req,res)=>{
+  
+})
 
 
 module.exports= router;

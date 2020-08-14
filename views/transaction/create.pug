@@ -12,4 +12,7 @@ form(action="/transaction/create", method="POST")
     select(name= "userId")
       each user in listUser
        option(value=user.name)= user.name
+  div
+    select(name="satatus")
+     option(value= "rented") rented
   button(type="submit") Gửi
