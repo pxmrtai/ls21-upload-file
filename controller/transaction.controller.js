@@ -30,14 +30,16 @@ module.exports.view = (req,res)=>{
 
 module.exports.postCreateRentalList = (req,res)=>{
     req.body.id = shortid.generate();
-    
+    console.log(req.body)
     db.get('rentalList').push(req.body).write()
     res.redirect('/transaction/index')
 }
 module.exports.update = (req,res)=>{
-    db.get('list')
+  
+    db.get('rentalList')
     .find({ id:  req.body.id })
-    .assign({title: req.body.title})
+    .assign({status: req.body.status})
     .write()
-    res.redirect('/book')
+  console.log(req.body)
+    res.redirect('/transaction/index')
 }

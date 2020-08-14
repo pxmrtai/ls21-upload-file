@@ -23,6 +23,7 @@ router.post('/create',controller.postCreateRentalList)
 // router.post('/update',(req,res)=>{
   
 // })
+router.post('/update',controller.update)
 
 
 module.exports= router;
