@@ -39,6 +39,7 @@ app.post('/update',controller.update)
 
 app.use('/users', userRoute)
 app.use('/transaction', transaction)
+app.use(express.static('public'))
 
 // listen for requests :)
 app.listen(port, () => {
