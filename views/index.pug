@@ -1,13 +1,11 @@
 extends ./layouts/common 
 block headContent
  div(class="dropdown")
-  button(class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Menu List
-    div(class="dropdown-menu" aria-labelledby="dropdownMenu2")
-      button(class="dropdown-item" type="button")
-        a(href="/users/index",class="dropdown-item" ) User List
-      button(class="dropdown-item" type="button")
-        a(href="/book", class="dropdown-item" ) Book List
-      button(class="dropdown-item" type="button")
-        a(href="/transaction/index", class="dropdown-item" ) Rental List
+  button(class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Menu List
+  div(class="dropdown-menu" aria-labelledby="dropdownMenuButton")
+    a(class="dropdown-item" href="/users/index"  ) User List
+    a( class="dropdown-item" href="/book") Book List
+    a(class="dropdown-item" href="/transaction/index") Rental List
+      //-  block footer
  
-
+ 
