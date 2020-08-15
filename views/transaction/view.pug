@@ -1,21 +1,23 @@
-h1 status of rental list 
+extends ../layouts/common 
+block headContent  
+  h1 status of rental list 
 
-h1 Name of Book : #{rentalList.bookId}
-h1 Name of User : #{rentalList.userId}
+  h1 Name of Book : #{rentalList.bookId}
+  h1 Name of User : #{rentalList.userId}
 
 
 
-form(action="/transaction/update" method="POST")
-      div
-        input(type="text" name="id" value= rentalList.id)
-        label(for="update" value=rentalList.id) ID
-      div
-        select(name="status" )
-         option(value= "isComplete") isCompelete
-      div  
-       button(type="submit") Update
- 
- 
-a(href="/transaction/index") RENTAL LIST
+  form(action="/transaction/update" method="POST")
+        div
+          input(type="text" name="id" value= rentalList.id)
+          label(for="update" value=rentalList.id) ID
+        div
+          select(name="status" )
+            option(value= "isComplete") isComplete
+        div  
+        button(type="submit") Update
+  
+  
+  a(href="/transaction/index") RENTAL LIST
 
 

@@ -1,18 +1,18 @@
-h1 create
+extends ../layouts/common 
+block headContent
+  h1 create
+  form(action="/transaction/create", method="POST")
+    div
+      select(name= "bookId")
+        each val in listBook
+          option(value=val.title)= val.title
 
-
-form(action="/transaction/create", method="POST")
-  div
-    select(name= "bookId")
-      each val in listBook
-       option(value=val.title)= val.title
-
-  
-  div
-    select(name= "userId")
-      each user in listUser
-       option(value=user.name)= user.name
-  div
-    select(name="status")
-     option(value= "rented") rented
-  button(type="submit") Gửi
+    
+    div
+      select(name= "userId")
+        each user in listUser
+          option(value=user.name)= user.name
+    div
+      select(name="status")
+        option(value= "rented") rented
+    button(type="submit") Gửi

@@ -1,4 +1,6 @@
-h1(style="text-align:center") #{list.title} 's Book 
-p 
- b description &nbsp&nbsp&nbsp 
- span= list.description
+extends ./layouts/common 
+block headContent
+    h1(style="text-align:center") #{list.title} 's Book 
+    p 
+    b description &nbsp&nbsp&nbsp 
+    span= list.description

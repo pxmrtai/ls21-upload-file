@@ -1,24 +1,27 @@
-h1 user
+extends ../layouts/common 
+block headContent
 
-form(action="/users/index", method="POST")
- label name
- input(type="text",name='name', required="required")
- button make
+ h1 user
+
+ form(action="/users/index", method="POST")
+  label name
+  input(type="text",name='name', required="required")
+  button make
  
 
-ul 
- each user in userList
-  li
-   span= user.name
-   a(href="/users/" + user.id) view 
-   div
-   a(href="/users/index/" + user.id+"/delete") delete
+ ul 
+  each user in userList
+   li
+    span= user.name
+    a(href="/users/" + user.id) view 
+    div
+    a(href="/users/index/" + user.id+"/delete") delete
    
    
-div
-div
-div
-a(href="/") BACK HOME
+    div
+    div
+    div
+ a(href="/") BACK HOME
    
    
    

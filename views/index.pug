@@ -1,11 +1,13 @@
-h1(style='text-align:center') HOME
-
-div(style="display:flex;width:100%")
- div(style="width:50%;text-align:center")
-  a(href="/users/index" style="font-size:30px") USER
- div(style="width:50%;text-align:center")
-  a(href="/book" style="font-size:30px") BOOK
-a(href="/transaction/index") rental list
- 
+extends ./layouts/common 
+block headContent
+ div(class="dropdown")
+  button(class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Menu List
+    div(class="dropdown-menu" aria-labelledby="dropdownMenu2")
+      button(class="dropdown-item" type="button")
+        a(href="/users/index",class="dropdown-item" ) User List
+      button(class="dropdown-item" type="button")
+        a(href="/book", class="dropdown-item" ) Book List
+      button(class="dropdown-item" type="button")
+        a(href="/transaction/index", class="dropdown-item" ) Rental List
  
 

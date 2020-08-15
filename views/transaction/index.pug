@@ -1,23 +1,25 @@
-h1 List Transactions
+extends ../layouts/common 
+block headContent
+   h1 List Transactions
 
-a(href="/transaction/create") Create New Transactions
+   a(href="/transaction/create") Create New Transactions
 
-each item in rentalList
-        ul
-          li
-             span Name:&nbsp
-             = item.userId
-          li
-             span id:&nbsp
-             = item.id
-          li
-           span Book:&nbsp
-           = item.bookId 
-          li 
-           span Status:&nbsp
-           = item.status
-           span &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-          a(href="/transaction/" + item.id) view 
+   each item in rentalList
+      ul
+         li
+            span Name:&nbsp
+            = item.userId
+         li
+            span id:&nbsp
+            = item.id
+         li
+            span Book:&nbsp
+            = item.bookId 
+         li 
+            span Status:&nbsp
+            = item.status
+            span &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+         a(href="/transaction/" + item.id) change status 
            
           
            
