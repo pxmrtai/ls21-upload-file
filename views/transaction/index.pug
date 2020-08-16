@@ -3,7 +3,7 @@ block headContent
 block navbar
    h1 List Transactions
 
-   a(href="/transaction/create") Create New Transactions
+   a.btn.btn-primary(href="/transaction/create") Create New Transactions
    table.table
      tr
        th User
@@ -14,18 +14,10 @@ block navbar
        tr
          each item in rentalList
             tr
-               td
-                  span Name:&nbsp
-                  = item.userId
-               td
-                  span id:&nbsp
-                  = item.id
-               td
-                  span Book:&nbsp
-                  = item.bookId 
-               td 
-                  span Status:&nbsp
-                  = item.status
+               td= item.userId
+               td= item.bookId 
+               td= item.id
+               td= item.status
                td  
                  a(href="/transaction/" + item.id) change status 
    a(href="/" class="btn btn-primary" role="button") Menu List        

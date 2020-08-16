@@ -1,7 +1,7 @@
 extends ../layouts/common 
 block headContent
 block navbar
-  h1 status of rental list 
+  h1(style="text-align:center") Status of rental list 
 
   h1 Name of Book : #{rentalList.bookId}
   h1 Name of User : #{rentalList.userId}
@@ -9,16 +9,17 @@ block navbar
 
 
   form(action="/transaction/update" method="POST")
-    .form-group.d-flex
+    .form-group
         div
           label(for="update" value=rentalList.id) ID
           input#update.form-control(type="text" name="id" value= rentalList.id)
           
-        div.form-control
-          select(name="status" )
+        div
+          lable Status
+          select.form-control(name="status" )
             option(value= "isComplete") isComplete
         div  
-        button(type="submit") Update
+        button.btn.btn-primary(type="submit") Update
   
   
   a.btn.btn-primary(href="/transaction/index") RENTAL LIST

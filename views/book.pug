@@ -13,7 +13,10 @@ block navbar
       tr
         td= book.title 
         td= book.id 
-        td= book.description
+        td
+          a.btn.btn-primary(data-toggle="collapse" href="#"+ book.id, role="button" aria-expanded="false" aria-controls="collapseExample") description
+          div(class="collapse" id= book.id)
+            div(class="card card-body")= book.description
         td
           a(href="/" + book.id) view
         td

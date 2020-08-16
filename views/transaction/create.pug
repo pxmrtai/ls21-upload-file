@@ -3,17 +3,18 @@ block headContent
 block navbar
   h1 create
   form(action="/transaction/create", method="POST")
-    div
-      select(name= "bookId")
-        each val in listBook
-          option(value=val.title)= val.title
+    .form-group.d-flex
+      div
+        select.form-control(name= "bookId")
+          each val in listBook
+            option(value=val.title)= val.title
 
     
-    div
-      select(name= "userId")
-        each user in listUser
-          option(value=user.name)= user.name
-    div
-      select(name="status")
-        option(value= "rented") rented
-    button(type="submit") Gửi
+      div
+        select.form-control(name= "userId")
+          each user in listUser
+            option(value=user.name)= user.name
+      div
+        select.form-control(name="status")
+          option(value= "rented") rented
+    button.btn.btn-primary(type="submit") Gửi
