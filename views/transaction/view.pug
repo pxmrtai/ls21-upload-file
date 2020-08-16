@@ -9,16 +9,18 @@ block navbar
 
 
   form(action="/transaction/update" method="POST")
+    .form-group.d-flex
         div
-          input(type="text" name="id" value= rentalList.id)
           label(for="update" value=rentalList.id) ID
-        div
+          input#update.form-control(type="text" name="id" value= rentalList.id)
+          
+        div.form-control
           select(name="status" )
             option(value= "isComplete") isComplete
         div  
         button(type="submit") Update
   
   
-  a(href="/transaction/index") RENTAL LIST
+  a.btn.btn-primary(href="/transaction/index") RENTAL LIST
 
 

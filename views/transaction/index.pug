@@ -4,23 +4,30 @@ block navbar
    h1 List Transactions
 
    a(href="/transaction/create") Create New Transactions
-
-   each item in rentalList
-      ul
-         li
-            span Name:&nbsp
-            = item.userId
-         li
-            span id:&nbsp
-            = item.id
-         li
-            span Book:&nbsp
-            = item.bookId 
-         li 
-            span Status:&nbsp
-            = item.status
-            span &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-         a(href="/transaction/" + item.id) change status 
+   table.table
+     tr
+       th User
+       th Book
+       th ID rental
+       th Status
+       th Action
+       tr
+         each item in rentalList
+            tr
+               td
+                  span Name:&nbsp
+                  = item.userId
+               td
+                  span id:&nbsp
+                  = item.id
+               td
+                  span Book:&nbsp
+                  = item.bookId 
+               td 
+                  span Status:&nbsp
+                  = item.status
+               td  
+                 a(href="/transaction/" + item.id) change status 
    a(href="/" class="btn btn-primary" role="button") Menu List        
           
            
