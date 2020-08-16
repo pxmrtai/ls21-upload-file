@@ -1,10 +1,10 @@
 extends ../layouts/common 
 block headContent
 block navbar
-   h1 List Transactions
+   h1 Rental List
 
    a.btn.btn-primary(href="/transaction/create") Create New Transactions
-   table.table
+   table.table.mt-3
      tr
        th User
        th Book
@@ -19,7 +19,7 @@ block navbar
                td= item.id
                td= item.status
                td  
-                 a(href="/transaction/" + item.id) change status 
+                 a.btn.btn-danger(href="/transaction/" + item.id) change status 
    a(href="/" class="btn btn-primary" role="button") Menu List        
           
            
