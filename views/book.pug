@@ -1,22 +1,22 @@
 extends ./layouts/common 
 block headContent
+block navbar
  
-  h1 book list
-
-  each book in list
-          ul
-            li(style="display:inline")
-             span Title:&nbsp
-             = book.title +   "    /"
-             span &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-            li(style="display:inline")
-             span ID:&nbsp
-             = book.id
-             br
-             div(style="display:inline") &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-            a(href="/" + book.id + "/delete") delete
-            span &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-            a(href="/" + book.id) view
+  h1 Book List
+  table.table
+    tr
+      th Title
+      th ID
+      th Action
+    each book in list
+      tr
+        td= book.title 
+        td= book.id 
+        td
+          a(href="/" + book.id) view
+        td
+          a(href="/" + book.id + "/delete") delete
+        
             
               
             
@@ -31,7 +31,7 @@ block headContent
           input(type="text" name="description" required="required")
           label(for="tittle") Description
         div  
-        button(type="submit") Create
+        button.btnb(type="submit") Create
   h2 Update Title
   form(action="/update" method="POST")
         div
