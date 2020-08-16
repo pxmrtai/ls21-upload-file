@@ -4,10 +4,11 @@ block navbar
 
  h1 user
 
- form(action="/users/index", method="POST")
-  label name
-  input(type="text",name='name', required="required")
-  button make
+ form.d-flex(action="/users/index", method="POST")
+   .from-group
+      label(for="nameUser") Name
+      input#nameUser.form-control(type="text",name='name', required="required")
+      button.btn.btn-primary make
  
 
  ul 
