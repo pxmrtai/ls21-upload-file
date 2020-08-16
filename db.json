@@ -98,6 +98,12 @@
       "userId": "player1",
       "status": "rented",
       "id": "AxQa5tbpq"
+    },
+    {
+      "bookId": "ta",
+      "userId": "player1",
+      "status": "rented",
+      "id": "aNziBTUUB"
     }
   ]
 }
