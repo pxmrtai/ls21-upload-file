@@ -21,40 +21,17 @@ module.exports.createRentalList =(req,res)=>{
   })
   
 }
-// module.exports.view = (req,res)=>{
-//    var rentalid = req.params.id;
-//     var wrongInput = db.get('rentalList').find({id: rentalid}).assign({isComplete: true}).write();
-//     if(rentalid !== wrongInput){
-//       var rental = db.get('rentalList').find({id:rentalid}).value()
-//     res.render('transaction/view',{
-//         rentalList: rental,
-//         list: db.get("rentalList").value
-//     })
-//     }
-    
-    
 
-    
-    
-// }
-module.exports.getcomplete = (req, res) => {
-  db.get('rentalList').find({id: req.params.id}).assign({isComplete: true}).write();
-  res.redirect('/transaction/index');
-};
+
 module.exports.postCreateRentalList = (req,res)=>{
     req.body.id = shortid.generate();
-  console.log(req.body)
     db.get('rentalList').push(req.body).write()
     res.redirect('/transaction/index')
 }
-module.exports.update = (req,res)=>{
-  
-    db.get('rentalList')
-    .find({ id:  req.body.id })
-    .assign({status: req.body.status})
-    .write()
-  console.log(req.body)
-  console.log(req.body.id)
-  console.log(req.body.status)
-    res.redirect('/transaction/index')
-}
+
+
+module.exports.getcomplete = (req, res) => {
+  db.get('rentalList').find({id: req.params.id}).assign({isComplete: true}).write();
+ 
+  res.redirect('/transaction/index');
+};

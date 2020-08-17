@@ -127,6 +127,24 @@
       "userId": "player1",
       "isComplete": "false",
       "id": "mnK_V7uhH"
+    },
+    {
+      "bookId": "ta",
+      "userId": "player1",
+      "isComplete": "false",
+      "id": "3ItAmCRGV"
+    },
+    {
+      "bookId": "ta",
+      "userId": "player1",
+      "isComplete": "false",
+      "id": "FPtxFy7md"
+    },
+    {
+      "bookId": "ta",
+      "userId": "player1",
+      "status": "rented",
+      "id": "GuGHUlS5I"
     }
   ]
 }

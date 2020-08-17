@@ -18,7 +18,7 @@ block navbar
           each user in listUser
             option(value=user.name)= user.name
       div
-        select.form-control(type="text", name="isComplete", style="display:none") 
-          option(value= 'false' ) 
+        select.form-control(name="status")
+          option(value= "rented") rented
          
     button.btn.btn-primary(type="submit") Gửi

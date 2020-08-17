@@ -16,8 +16,13 @@ block navbar
                td= item.userId
                td= item.bookId 
                td= item.id
-               td  
-                 a.btn.btn-danger(href="/transaction/" + item.id+"/complete") isComplete 
+                td 
+                    if item.isComplete 
+                      span Đã trả
+                    else
+                      span Chưa trả
+
+                      a(href='/transaction/' + item.id + '/complete') Complete
    a(href="/" class="btn btn-primary" role="button") Menu List        
 
           
