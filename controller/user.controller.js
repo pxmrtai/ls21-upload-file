@@ -23,7 +23,17 @@ module.exports.delete =  function(req, res) {
 
 module.exports.postIndex = (req,res)=>{
     req.body.id = shortid.generate();
-
+    var checkName = req.body.name
+    var errors = []
+    if(checkName.length > 30){
+      errors.push("user's Name is too long")
+    }
+    if(errors.length){
+      res.render('users/index',{
+     errors: errors
+  })
+      return;
+    }
     db.get('user').push(req.body).write()
     
     res.redirect('/users/index')

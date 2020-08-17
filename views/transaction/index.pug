@@ -9,20 +9,20 @@ block navbar
        th User
        th Book
        th ID rental
-       th Action
+       th Status
        tr
          each item in rentalList
             tr
                td= item.userId
                td= item.bookId 
                td= item.id
-                td 
+               td 
                     if item.isComplete 
-                      span Đã trả
+                      span Returned
                     else
-                      span Chưa trả
-
-                      a(href='/transaction/' + item.id + '/complete') Complete
+                      span Renting
+                       span.ml-5
+                        a.btn.btn-danger(href='/transaction/' + item.id + '/complete') Complete
    a(href="/" class="btn btn-primary" role="button") Menu List        
 
           

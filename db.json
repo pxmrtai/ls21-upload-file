@@ -1,11 +1,6 @@
 {
   "list": [
     {
-      "title": "ta",
-      "description": "this is comic book",
-      "id": "_KUOGp0sn"
-    },
-    {
       "title": "javascript",
       "description": "this is cooking book",
       "id": "FMCDGsgXr"
@@ -24,16 +19,17 @@
       "title": "koko's story",
       "description": "this is koko's book",
       "id": "Y5Pd0z-Es"
+    },
+    {
+      "title": "nam",
+      "description": "this is Englishbook",
+      "id": "gYKRLzJcm"
     }
   ],
   "user": [
     {
       "name": "player1",
       "id": "ffFQkJk9y"
-    },
-    {
-      "name": "tai",
-      "id": "CBNIpM37-"
     },
     {
       "name": "akari sakata",
@@ -66,6 +62,14 @@
     {
       "name": "akari sakata",
       "id": "f8canc0yu"
+    },
+    {
+      "name": "akari sakata",
+      "id": "hFso-eqhz"
+    },
+    {
+      "name": "akari sakata",
+      "id": "WlMqeDCoS"
     }
   ],
   "rentalList": [
@@ -94,7 +98,8 @@
       "bookId": "koko's story",
       "userId": "akari sakata",
       "status": "isComplete",
-      "id": "Q6GNvYgwL"
+      "id": "Q6GNvYgwL",
+      "isComplete": true
     },
     {
       "bookId": "ta",
@@ -106,7 +111,8 @@
       "bookId": "ta",
       "userId": "player1",
       "status": "rented",
-      "id": "aNziBTUUB"
+      "id": "aNziBTUUB",
+      "isComplete": true
     },
     {
       "bookId": "ta",
