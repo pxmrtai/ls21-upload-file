@@ -43,6 +43,7 @@ module.exports.getcomplete = (req, res) => {
 };
 module.exports.postCreateRentalList = (req,res)=>{
     req.body.id = shortid.generate();
+  console.log(req.body)
     db.get('rentalList').push(req.body).write()
     res.redirect('/transaction/index')
 }
