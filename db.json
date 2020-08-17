@@ -154,6 +154,12 @@
       "userId": "player1",
       "status": "rented",
       "id": "GuGHUlS5I"
+    },
+    {
+      "bookId": "javascript",
+      "userId": "player1",
+      "status": "rented",
+      "id": "v4h4DB4dh"
     }
   ]
 }

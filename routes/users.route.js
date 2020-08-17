@@ -14,6 +14,8 @@ db.defaults({ user: [] })
 
 router.get('/index',controller.index)
 router.get('/:id',controller.view)
+router.get('/create',controller.createUser)
+
 router.get("/index/:id/delete",controller.delete)
 
 router.post('/index',controller.postIndex)

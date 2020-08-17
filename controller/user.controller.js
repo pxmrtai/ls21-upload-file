@@ -20,7 +20,12 @@ module.exports.delete =  function(req, res) {
      
  res.redirect('/users/index')
 }
-
+module.exports.createUser =(req,res)=>{
+  res.render("users/create",{
+     user: db.get("user").value()
+  })
+  
+}
 module.exports.postIndex = (req,res)=>{
     req.body.id = shortid.generate();
     var checkName = req.body.name
@@ -28,10 +33,15 @@ module.exports.postIndex = (req,res)=>{
     if(checkName.length > 30){
       errors.push("user's Name is too long")
     }
+    if(!req.body.name){
+      errors.push('Name is quired')
+    }
     if(errors.length){
       res.render('users/index',{
      errors: errors
+        
   })
+     
       return;
     }
     db.get('user').push(req.body).write()
