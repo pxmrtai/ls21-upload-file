@@ -22,7 +22,14 @@ module.exports.createRentalList =(req,res)=>{
   
 }
 module.exports.view = (req,res)=>{
-    var rentalid = req.params.id;
+   var rentalid = req.params.id;
+    var wrongInput = db.get('rentalList').find({id: rentalid}).assign({isComplete: true}).write();
+    if(rentalid !== wrongInput){
+      
+    }
+    
+    
+
     var rental = db.get('rentalList').find({id:rentalid}).value()
     res.render('transaction/view',{
         rentalList: rental,
@@ -31,9 +38,8 @@ module.exports.view = (req,res)=>{
     
 }
 module.exports.getcomplete = (req, res) => {
-  db.get('rentalList').find({id: req.params.id}).assign({isComplete: true}).write();
-};
-
+  
+}
 module.exports.postCreateRentalList = (req,res)=>{
     req.body.id = shortid.generate();
     db.get('rentalList').push(req.body).write()
