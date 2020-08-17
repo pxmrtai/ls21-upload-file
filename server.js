@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 5000
+
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 const shortid = require('shortid');
@@ -28,6 +29,7 @@ app.get('/book',controller.listBook
 //        listUser : db.get('user').value()
 //     })
 // })
+
 app.get('/:id',controller.view)
 app.get("/:id/delete", controller.deleteBook)
 

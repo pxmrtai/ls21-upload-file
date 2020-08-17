@@ -2,18 +2,9 @@ extends ../layouts/common
 block headContent
 block navbar
 
-  h1 user
-    if errors
-      each error in errors
-          .alert.alert-danger= error
+  h1 User List
+  a.btn.btn-primary(href="/users/create") Create New Transactions
 
-  form(action="/users/index", method="POST")
-   .from-group.d-flex
-      label(for="nameUser") Name
-      div
-        input#nameUser.form-control(type="text",name='name')
-      div
-        button.btn.btn-primary.ml-4 make
   table.table
     tr
       th Name
@@ -27,13 +18,7 @@ block navbar
           a(href="/users/" + user.id) view 
         td
           a(href="/users/index/" + user.id+"/delete") delete
-    
-  
-    
-  
-   
-   
-  a.btn.btn-primary(href="/users/create") Create New Transactions
+
   a(href="/" class="btn btn-primary" role="button") Menu List
    
    

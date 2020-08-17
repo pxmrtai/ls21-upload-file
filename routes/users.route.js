@@ -13,8 +13,10 @@ db.defaults({ user: [] })
   .write()
 
 router.get('/index',controller.index)
-router.get('/:id',controller.view)
 router.get('/create',controller.createUser)
+
+router.get('/:id',controller.view)
+
 
 router.get("/index/:id/delete",controller.delete)
 
