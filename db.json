@@ -73,19 +73,22 @@
       "bookId": "cooking",
       "userId": "player1",
       "status": "isComplete",
-      "id": "Bdzu5Q9Ot"
+      "id": "Bdzu5Q9Ot",
+      "isComplete": true
     },
     {
       "bookId": "asd",
       "userId": "as",
       "status": "isComplete",
-      "id": "dkJoB6CtJ"
+      "id": "dkJoB6CtJ",
+      "isComplete": true
     },
     {
       "bookId": "dancing",
       "userId": "as",
       "status": "isComplete",
-      "id": "tcNE6OLfk"
+      "id": "tcNE6OLfk",
+      "isComplete": true
     },
     {
       "bookId": "koko's story",

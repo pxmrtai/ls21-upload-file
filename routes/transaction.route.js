@@ -10,10 +10,11 @@ router.use(bodyParser.urlencoded({ extended: true })) // for parsing application
 // Set some defaults (required if your JSON file is empty)
 db.defaults({ rentalList: [] })
   .write()
+router.get("/:id/complete",controller.getcomplete)
+
 router.get("/index",controller.rentalIndex)
 
 router.get("/create",controller.createRentalList)
-router.get("/transactions/:id/complete",controller.getcomplete)
 
 
 
@@ -23,7 +24,7 @@ router.post('/create',controller.postCreateRentalList)
 // router.post('/update',(req,res)=>{
   
 // })
-router.post('/update',controller.update)
+// router.post('/update',controller.update)
 
 
 module.exports= router;
