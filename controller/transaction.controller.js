@@ -24,22 +24,15 @@ module.exports.createRentalList =(req,res)=>{
 module.exports.view = (req,res)=>{
     var rentalid = req.params.id;
     var rental = db.get('rentalList').find({id:rentalid}).value()
-    var errors = []
-    if(!req.body.id){
-      errors.push('user not exsit')
-    }
-    if(errors.length){
-      res.render('transaction/:id',{
-       errors: errors
-    })
-    }
-      
     res.render('transaction/view',{
         rentalList: rental,
         list: db.get("rentalList").value
     })
     
 }
+module.exports.getcomplete = (req, res) => {
+  db.get('rentalList').find({id: req.params.id}).assign({isComplete: true}).write();
+};
 
 module.exports.postCreateRentalList = (req,res)=>{
     req.body.id = shortid.generate();

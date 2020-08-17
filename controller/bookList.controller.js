@@ -25,6 +25,10 @@ module.exports.deleteBook =function(req, res) {
      
  res.redirect('/book')
 }
+module.exports.getcomplete = (req, res) => {
+  db.get('transactions').find({id: req.params.id}).assign({isComplete: true}).write();
+  res.redirect('/transactions');
+};
 module.exports.postIndex = (req,res)=>{
     req.body.id = shortid.generate();
 
