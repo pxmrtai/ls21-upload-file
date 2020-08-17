@@ -21,8 +21,8 @@ module.exports.delete =  function(req, res) {
  res.redirect('/users/index')
 }
 module.exports.createUser =(req,res)=>{
-  res.render("users/create",{
-     user: db.get("user").value()
+  res.render('users/create',{
+   
   })
   
 }

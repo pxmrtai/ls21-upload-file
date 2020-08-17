@@ -1,0 +1,11 @@
+extends ../layouts/common 
+block headContent
+block navbar
+  h1 Create User
+  form(action="/users/index", method="POST")
+   .from-group.d-flex
+      label(for="nameUser") Name
+      div
+        input#nameUser.form-control(type="text",name='name')
+      div
+        button.btn.btn-primary.ml-4 make
