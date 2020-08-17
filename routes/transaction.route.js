@@ -13,7 +13,7 @@ db.defaults({ rentalList: [] })
 router.get("/index",controller.rentalIndex)
 
 router.get("/create",controller.createRentalList)
-router.get('/:id',controller.view)
+router.get("/transactions/:id/complete",controller.getcomplete)
 
 
 

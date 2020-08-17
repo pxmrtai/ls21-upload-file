@@ -9,7 +9,6 @@ block navbar
        th User
        th Book
        th ID rental
-       th Status
        th Action
        tr
          each item in rentalList
@@ -17,12 +16,10 @@ block navbar
                td= item.userId
                td= item.bookId 
                td= item.id
-               td= item.status
                td  
-                 a.btn.btn-danger(href="/transaction/" + item.id) change status 
+                 a.btn.btn-danger(href="/transaction/" + item.id+"/complete") isComplete 
    a(href="/" class="btn btn-primary" role="button") Menu List        
-          
-           
+
           
             
           

@@ -18,6 +18,6 @@ block navbar
           each user in listUser
             option(value=user.name)= user.name
       div
-        select.form-control(name="status")
-          option(value= "rented") rented
+        input.form-control(type:"tezxt"name="isComplete", value= false)
+         
     button.btn.btn-primary(type="submit") Gửi
