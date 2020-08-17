@@ -25,16 +25,16 @@ module.exports.view = (req,res)=>{
    var rentalid = req.params.id;
     var wrongInput = db.get('rentalList').find({id: rentalid}).assign({isComplete: true}).write();
     if(rentalid !== wrongInput){
-      
-    }
-    
-    
-
-    var rental = db.get('rentalList').find({id:rentalid}).value()
+      var rental = db.get('rentalList').find({id:rentalid}).value()
     res.render('transaction/view',{
         rentalList: rental,
         list: db.get("rentalList").value
     })
+    }
+    
+    
+
+    
     
 }
 module.exports.getcomplete = (req, res) => {
