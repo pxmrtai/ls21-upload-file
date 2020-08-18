@@ -125,7 +125,7 @@
     {
       "bookId": "ta",
       "userId": "player1",
-      "isComplete": "",
+      "isComplete": true,
       "id": "Xo9H96-cD"
     },
     {
