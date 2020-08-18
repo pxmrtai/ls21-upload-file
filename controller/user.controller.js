@@ -28,22 +28,7 @@ module.exports.createUser =(req,res)=>{
 }
 module.exports.postIndex = (req,res)=>{
     req.body.id = shortid.generate();
-    var checkName = req.body.name
-    var errors = []
-    if(checkName.length > 30){
-      errors.push("maximun is 30 words")
-    }
-    if(!req.body.name){
-      errors.push('Name is quired')
-    }
-    if(errors.length){
-      res.render('users/create',{
-     errors: errors
-        
-  })
-     
-      return;
-    }
+    
     db.get('user').push(req.body).write()
     
     res.redirect('/users/index')

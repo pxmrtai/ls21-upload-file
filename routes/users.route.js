@@ -5,6 +5,7 @@ const db = require('../db')
 const bodyParser = require('body-parser')
 
 var controller = require('../controller/user.controller')
+var validation = require('../validation/users.validation')
 
 router.use(bodyParser.json()) // for parsing application/json
 router.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
@@ -20,6 +21,6 @@ router.get('/:id',controller.view)
 
 router.get("/index/:id/delete",controller.delete)
 
-router.post('/index',controller.postIndex)
+router.post('/index',validation.createUser,controller.postIndex)
 
 module.exports = router;
