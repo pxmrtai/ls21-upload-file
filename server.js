@@ -16,6 +16,8 @@ app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.set('view engine', 'pug')
 app.set('views', './views')
+app.use(counting);
+
 
 // Set some defaults (required if your JSON file is empty)
 // bạn tạo middleware xong rồi phải không
@@ -39,7 +41,7 @@ app.get("/:id/delete", controller.deleteBook)
 
 
 
-app.post('/',counting.countCookie , controller.postIndex) // ?? cái này để làm gì vậy bạn ?
+app.post('/', controller.postIndex) // ?? cái này để làm gì vậy bạn ?
 // theo đề bài thì là gửi cookie qua mỗi lần user vào sever ạ... em đặt couting côkeie ở đó ạ
 // hoh; nhưng như thế thì bạn phải gọi tới kiểu như http://localhost:3000/ thì nó mới nhảy vào ođây
 
@@ -47,8 +49,14 @@ app.post('/',counting.countCookie , controller.postIndex) // ?? cái này để 
 
 // bình thường mình sẽ hay viết như này 
 // app.use('path', middleware, validation, controller);
-// nếu như bạn muốn tất cả điều chạy qua mà không 
+// nếu như bạn muốn tất cả điều chạy qua mà không cần đường dẫn bạn có thể viết
+// app.use(middleware) (ví dụ middleware, validate cũng được) 
 
+// vậy nếu muốn chạy tất cả chỉ cần thêm 1 dòng app.use(middleware ) đúng không ạ?
+// yes, nhưng mà đặt ở đâu cho hợp lý nha, vì chương trình chạy từ trên xuống, nên đặt cuối  nó cũng không có ý nghĩa gì lăm :v
+// app.use(counting) như này ý ạ?
+// yes, tùy bạn đặt tên thôi :3
+// bạn qua file middleware đi 
 
 app.post('/update',controller.update)
 
@@ -56,6 +64,7 @@ app.post('/update',controller.update)
 app.use('/users', userRoute)
 app.use('/transaction', transaction)
 app.use(express.static('public'))
+
 
 // listen for requests :)
 app.listen(port, () => {
