@@ -1,3 +1,4 @@
-module.export.counting = (req,res,next)=>{
+module.exports.countCookie = (req,res,next)=>{
   console.log('hello')
+  next()
 }
