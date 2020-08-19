@@ -39,3 +39,7 @@ module.exports = (req,res,next)=>{
 // ở bài nà thì nó không có cookies gì đâu bạn 
 // vì bạn chưa set cookies nữa , đây nói đúng hơn là đếm số request gửi lên server thôi :v chứ chưa  có cookies gì đâu
 // dạ ... em hiểu rồi ạ!! tại em đang muốn test mấy cái để hiểu rõ hơn về cookie thôi ạ... thử làm vài cái test giống trên của anh thịnh xem nó có chạy qua  hay mấy cái linh tinh không thôi ạ :)) 
+// em cảm ơn anh nha ! em hiểu rồi ạ
+// anh ơi! 
+// sao vậy bạn ?
+// dạ .. chỉ check xem anh đọc được tin nhắn ạ! em cảm ơn ạ .. em hoàn thành đây ạ
