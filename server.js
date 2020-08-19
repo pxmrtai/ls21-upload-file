@@ -10,12 +10,14 @@ const db = low(adapter)
 var userRoute = require('./routes/users.route');
 var transaction = require('./routes/transaction.route')
 var counting = require('./middleware/count.middleware')
+// var cookieParser = require('cookie-parser')
 var controller = require ('./controller/bookList.controller')
 const bodyParser = require('body-parser')
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.set('view engine', 'pug')
 app.set('views', './views')
+// app.use(cookieParser())
 app.use(counting);
 
 
