@@ -27,5 +27,6 @@ if(user.password !== password){
      });
    return;
 }
-  res.redirect('/')
+  res.cookie('userId', user.id)
+  res.redirect('/users/index')
 }
