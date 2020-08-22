@@ -2,7 +2,9 @@ const db = require('../db')
 const shortid = require('shortid')
 
 module.exports.customer = (req,res)=>{
-  res.render('users/customer')
+  res.render('userOnly/customer',{
+    list : db.get('list').value()
+  })
 }
 
 module.exports.index = (req,res)=>{

@@ -28,5 +28,5 @@ if(user.password !== password){
    return;
 }
   res.cookie('userId', user.id)
-  res.redirect('/users/index')
+  res.redirect('/users/customer')
 }
