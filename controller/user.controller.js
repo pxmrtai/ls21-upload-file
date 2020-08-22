@@ -9,6 +9,7 @@ module.exports.customer = (req,res)=>{
 module.exports.userLogin = (req,res)=>{
   var id = req.params.id;
   var user = db.get('user').find({id:id}).value();
+  console.log(user)
   res.render('userOnly/index',{
         user: user
     })
@@ -22,6 +23,7 @@ module.exports.index = (req,res)=>{
 module.exports.view = (req,res)=>{
     var id = req.params.id;
     var user = db.get('user').find({id:id}).value();
+  console.log(user)
     res.render('users/view',{
         user: user
     })
