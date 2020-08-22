@@ -14,6 +14,8 @@ block navbar
       tr
         td= user.name
         td= user.id
+        td= user.password
+        td= user.email
         td
           a(href="/users/" + user.id) view 
         td
