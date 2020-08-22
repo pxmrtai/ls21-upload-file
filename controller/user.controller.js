@@ -9,19 +9,23 @@ module.exports.rental=(req,res)=>{
 
 module.exports.customer = (req,res)=>{
   var listBook = db.get('list').value()
+  console.log(listBook)
   res.render('userOnly/customer',{
-    listBook : db.get("list").value(),
-    listUser : db.get("user").value(),
+    list : db.get("list").value(),
     rentalList : db.get('rentalList').value()
   })
  
 }
 module.exports.userLogin = (req,res)=>{
-  console.log(req.cookies.userId)
-  var user = db.get('user').value();
+  if(req.cookies.userId){
+    var user = db.get('user').find({id: req.cookies.userId}).value();
   res.render('userOnly/index',{
         user: user
     })
+    return
+  }
+  console.log('khong co')
+  
 }
 module.exports.index = (req,res)=>{
   
