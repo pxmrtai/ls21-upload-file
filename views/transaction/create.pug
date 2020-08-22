@@ -15,6 +15,7 @@ block navbar
         select.form-control(name= "userId")
           each user in listUser
             option(value=user.name)= user.name
+            option(value=user.id)= user.id
       div
         select.form-control(name="status")
           each user in listUser
