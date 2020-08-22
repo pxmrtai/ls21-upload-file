@@ -6,8 +6,15 @@ module.exports.customer = (req,res)=>{
     list : db.get('list').value()
   })
 }
-
+module.exports.userLogin = (req,res)=>{
+  var id = req.params.id;
+  var user = db.get('user').find({id:id}).value();
+  res.render('userOnly/index',{
+        user: user
+    })
+}
 module.exports.index = (req,res)=>{
+  
   res.render('users/index',{
     userList : db.get('user').value()
   })
