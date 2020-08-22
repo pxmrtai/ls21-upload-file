@@ -49,8 +49,8 @@ module.exports.createUser =(req,res)=>{
   
 }
 module.exports.postIndex = (req,res)=>{
-    req.body.id = shortid.generate();
-    var email = req.body.email
+  req.body.id = shortid.generate();
+  var email = req.body.email
  var user= db.get('user').find({email:email}).value()
  if(user){
      res.render('users/create',{

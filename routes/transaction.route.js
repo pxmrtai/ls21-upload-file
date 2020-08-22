@@ -4,6 +4,8 @@ const db = require('../db')
 const shortid = require('shortid')
 const bodyParser = require('body-parser')
 var controller = require('../controller/transaction.controller')
+var emailMiddleware = require('../middleware/email.middleware')
+
 
 router.use(bodyParser.json()) // for parsing application/json
 router.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
@@ -20,7 +22,7 @@ router.get("/create",controller.createRentalList)
 
 
 
-router.post('/create',controller.postCreateRentalList)
+router.post('/create',emailMiddleware.notExist, controller.postCreateRentalList)
 // router.post('/update',(req,res)=>{
   
 // })
