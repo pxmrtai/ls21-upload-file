@@ -1,0 +1,30 @@
+extends ../layouts/userOnly 
+block headContent
+block navbar
+   h1 Rental List
+
+   a.btn.btn-primary(href="/transaction/create") Create New Transactions
+   table.table.mt-3
+     tr
+       th User
+       th Book
+       th ID rental
+       th Status
+       tr
+         each item in rentalList
+            tr
+               td= item.userId
+               td= item.bookId 
+               td= item.id
+               td 
+                    if item.isComplete 
+                      span Returned
+                    else
+                      span Renting
+                       span.ml-5
+                        a.btn.btn-danger(href='/transaction/' + item.id + '/complete') Complete
+   a(href="/" class="btn btn-primary" role="button") Menu List        
+
+          
+            
+          
