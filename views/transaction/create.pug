@@ -17,6 +17,7 @@ block navbar
             option(value=user.name)= user.name
       div
         select.form-control(name="status")
-          option(value= "rented") rented
+          each user in listUser
+            option(value= user.id)= user.id
          
     button.btn.btn-primary(type="submit") Gửi

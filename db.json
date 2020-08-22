@@ -128,6 +128,12 @@
       "userId": "player1",
       "status": "rented",
       "id": "v4h4DB4dh"
+    },
+    {
+      "bookId": "dancing",
+      "userId": "akari sakata",
+      "status": "rented",
+      "id": "9zlXoh83h"
     }
   ]
 }

@@ -1,12 +1,6 @@
 const db = require('../db')
 const shortid = require('shortid')
 
-module.exports.rental=(req,res)=>{
-  res.render('userOnly/rental',{
-    rentalList: db.get('rentalList')
-  })
-}
-
 module.exports.customer = (req,res)=>{
   var listBook = db.get('list').value()
   var rentalList= db.get('rentalList').value()
