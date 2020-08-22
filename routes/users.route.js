@@ -14,7 +14,7 @@ router.use(bodyParser.urlencoded({ extended: true })) // for parsing application
 db.defaults({ user: [] })
   .write()
 
-router.get('/index',controller.index)
+router.get('/index',authMiddleware.requireAuth, controller.index)
 router.get('/create',controller.createUser)
 
 router.get('/:id',controller.view)
