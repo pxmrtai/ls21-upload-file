@@ -12,9 +12,8 @@ block navbar
 
     
       div
-        select.form-control(name= "userId")
-          each user in listUser
-            option(value=user.name)= user.name
+        label(for="email") email
+          input#email.form-control(type="email",name='email')
       div
         select.form-control(name="status")
           each user in listUser
