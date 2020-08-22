@@ -2,9 +2,11 @@ const db = require('../db')
 
 
 module.exports.notExist = (req,res,next)=>{
-  var user= db.get('user').value()
-  var email = db.get('user').find({email:user.email}).value()
+
+  var email = req.body.email
+   var user= db.get('user').find({email:email}).value()
   console.log(email)
+  console.log(user)
   if(!email){
     res.render('transaction/create',{
       errors:[
