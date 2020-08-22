@@ -7,15 +7,13 @@ html
     body
       block headContent
       nav.navbar.navbar-expand-lg.navbar-light.bg-light
-            a.navbar-brand(href='/') Home
+            a.navbar-brand(href='/users/userLogin') Home
             button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
                 span.navbar-toggler-icon
             #navbarNav.collapse.navbar-collapse
                 ul.navbar-nav
                     li.nav-item
                         a.nav-link(href='/users/customer') Book List 
-                    li.nav-item
-                        a.nav-link(href='/users/rental') Rental List
       .container.pt-5
         block navbar
       script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")

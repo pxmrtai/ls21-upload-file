@@ -9,22 +9,22 @@ module.exports.rental=(req,res)=>{
 
 module.exports.customer = (req,res)=>{
   var listBook = db.get('list').value()
-  console.log(listBook)
+  var rentalList= db.get('rentalList').value()
+  console.log(rentalList)
   res.render('userOnly/customer',{
     list : db.get("list").value(),
-    rentalList : db.get('rentalList').value()
+    rentalList : rentalList
   })
  
 }
 module.exports.userLogin = (req,res)=>{
   if(req.cookies.userId){
-    var user = db.get('user').find({id: req.cookies.userId}).value();
+  var user = db.get('user').find({id: req.cookies.userId}).value();
   res.render('userOnly/index',{
         user: user
     })
     return
   }
-  console.log('khong co')
   
 }
 module.exports.index = (req,res)=>{

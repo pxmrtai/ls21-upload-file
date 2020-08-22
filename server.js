@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-
 app.set('view engine', 'pug')
 app.set('views', './views')
 app.use(cookieParser())
-app.use(counting);
+// app.use(counting);
 
 
 // Set some defaults (required if your JSON file is empty)
