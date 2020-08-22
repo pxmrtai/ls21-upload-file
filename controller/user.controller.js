@@ -8,16 +8,17 @@ module.exports.rental=(req,res)=>{
 }
 
 module.exports.customer = (req,res)=>{
+  var listBook = db.get('list').value()
   res.render('userOnly/customer',{
     listBook : db.get("list").value(),
-     listUser : db.get("user").value(),
-     rentalList : db.get('rentalList').value()
+    listUser : db.get("user").value(),
+    rentalList : db.get('rentalList').value()
   })
+ 
 }
 module.exports.userLogin = (req,res)=>{
-  var id = req.params.id;
-  var user = db.get('user').find({id:id}).value();
-  console.log(user)
+  console.log(req.cookies.userId)
+  var user = db.get('user').value();
   res.render('userOnly/index',{
         user: user
     })
@@ -31,7 +32,6 @@ module.exports.index = (req,res)=>{
 module.exports.view = (req,res)=>{
     var id = req.params.id;
     var user = db.get('user').find({id:id}).value();
-  console.log(user)
     res.render('users/view',{
         user: user
     })

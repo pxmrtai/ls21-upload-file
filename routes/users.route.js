@@ -1,7 +1,7 @@
 var epxress = require('express');
 var router = epxress.Router();
 const db = require('../db')
-
+const shortid = require('shortid')
 const bodyParser = require('body-parser')
 
 var controller = require('../controller/user.controller')
