@@ -1,6 +1,10 @@
 const db = require('../db')
 const shortid = require('shortid')
 
+module.exports.customer = (req,res)=>{
+  res.render('users/customer')
+}
+
 module.exports.index = (req,res)=>{
   res.render('users/index',{
     userList : db.get('user').value()

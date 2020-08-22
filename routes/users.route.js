@@ -16,6 +16,7 @@ db.defaults({ user: [] })
 
 router.get('/index', controller.index)
 router.get('/create',controller.createUser)
+router.get('/customer',controller.customer)
 
 router.get('/:id',controller.view)
 
