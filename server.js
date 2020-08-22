@@ -12,14 +12,16 @@ var authRoute = require('./routes/auth.route');
 
 var transaction = require('./routes/transaction.route')
 var counting = require('./middleware/count.middleware')
-// var cookieParser = require('cookie-parser') sao em uncomment cho nay >< baif tr
+var cookieParser = require('cookie-parser') 
 var controller = require ('./controller/bookList.controller')
+
+var authMiddleware = require('./middleware/auth.middleware')
 const bodyParser = require('body-parser')
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.set('view engine', 'pug')
 app.set('views', './views')
-// app.use(cookieParser())
+app.use(cookieParser())
 app.use(counting);
 
 
@@ -31,7 +33,7 @@ db.defaults({ list: [] })
   .write()
  
 app.get('/',controller.index)
-app.get('/book',controller.listBook
+app.get('/book',authMiddleware.requireAuth,controller.listBook
 //         server
 )
 // app.get('/users/index',(req,res) => {
@@ -40,8 +42,8 @@ app.get('/book',controller.listBook
 //     })
 // })
 
-app.get('/:id',controller.view)
-app.get("/:id/delete", controller.deleteBook)
+app.get('/:id',authMiddleware.requireAuth,controller.view)
+app.get("/:id/delete",authMiddleware.requireAuth, controller.deleteBook)
 
 
 
@@ -50,8 +52,8 @@ app.post('/', controller.postIndex) // ?? cái này để làm gì vậy bạn ?
 app.post('/update',controller.update)
 
 
-app.use('/users', userRoute)
-app.use('/transaction', transaction)
+app.use('/users',authMiddleware.requireAuth, userRoute)
+app.use('/transaction',authMiddleware.requireAuth, transaction)
 app.use('/auth',authRoute)
 app.use(express.static('public'))
 
