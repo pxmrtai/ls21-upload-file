@@ -8,7 +8,7 @@ const shortid = require('shortid');
 const adapter = new FileSync('db.json')
 const db = low(adapter)
 var userRoute = require('./routes/users.route');
-var authRoute = require('./routes/login.route');
+var authRoute = require('./routes/auth.route');
 
 var transaction = require('./routes/transaction.route')
 var counting = require('./middleware/count.middleware')
