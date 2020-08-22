@@ -12,7 +12,7 @@ var authRoute = require('./routes/auth.route');
 
 var transaction = require('./routes/transaction.route')
 var counting = require('./middleware/count.middleware')
-// var cookieParser = require('cookie-parser')
+// var cookieParser = require('cookie-parser') sao em uncomment cho nay >< baif tr
 var controller = require ('./controller/bookList.controller')
 const bodyParser = require('body-parser')
 app.use(bodyParser.json()) // for parsing application/json

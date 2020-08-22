@@ -2,7 +2,7 @@ const db = require('../db')
 
 
 module.exports.requireAuth = (req,res,next)=>{
-  
+  console.log(req.cookies);
   if(!req.cookies.userId){
     res.redirect('/auth/login');
     return
