@@ -1,5 +1,6 @@
 const db = require('../db')
 const shortid = require('shortid')
+var emailMiddleware = require('../middleware/email.middleware')
 
 module.exports.customer = (req,res)=>{
   var listBook = db.get('list').value()
