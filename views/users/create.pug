@@ -7,9 +7,14 @@ block navbar
         .alert.alert-danger= error
   form.mt-4(action="/users/index", method="POST")
      .from-group.d-flex
-        label(for="nameUser") Name
+        
         div
+          label(for="nameUser") Name
           input#nameUser.form-control(type="text",name='name')
+        div
+          label(for="email") email
+          input#email.form-control(type="email",name='email')
+          input.form-control(type="passwprd",name='password',style='display:none', value='123123') 
         div
           button.btn.btn-primary.ml-4 make
           
