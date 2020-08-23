@@ -29,7 +29,7 @@ if(user.password !== password){
    return;
 }
   if(user.isAdmin===true){
-    res.render('transaction/index')
+    res.redirect('transaction/index')
     return
   }
   
@@ -37,3 +37,5 @@ if(user.password !== password){
   
   res.redirect('/users/customer')
 }
+// giải thích cho anh xem hiện tại nó ra sao, và em muốn nó thành thế nào
+// chỉ đơn giản là khoonget s em cứ nói đi nah có nghe thấy
