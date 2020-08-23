@@ -6,6 +6,8 @@ const bodyParser = require('body-parser')
 
 var controller = require('../controller/user.controller')
 var validation = require('../validation/users.validation')
+var emailMiddleware = require('../middleware/email.middleware')
+
 
 
 router.use(bodyParser.json()) // for parsing application/json
@@ -15,7 +17,7 @@ db.defaults({ user: [] })
   .write()
 
 router.get('/index', controller.index)
-router.get('/create',controller.createUser)
+router.get('/create',emailMiddleware.existed, controller.createUser)
 router.get('/customer',controller.customer)
 router.get('/userLogin',controller.userLogin)
 

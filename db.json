@@ -44,139 +44,15 @@
       "email": "pxmrtai97@gmail.co",
       "password": "123123",
       "id": "kcCkHZXEq"
+    },
+    {
+      "name": "tai",
+      "email": "pxmrtai97@gmail.com2",
+      "password": "123123",
+      "id": "RWe-An-yS"
     }
   ],
   "rentalList": [
-    {
-      "bookId": "cooking",
-      "userId": "player1",
-      "status": "isComplete",
-      "id": "Bdzu5Q9Ot",
-      "isComplete": true
-    },
-    {
-      "bookId": "asd",
-      "userId": "as",
-      "status": "isComplete",
-      "id": "dkJoB6CtJ",
-      "isComplete": true
-    },
-    {
-      "bookId": "dancing",
-      "userId": "as",
-      "status": "isComplete",
-      "id": "tcNE6OLfk",
-      "isComplete": true
-    },
-    {
-      "bookId": "koko's story",
-      "userId": "akari sakata",
-      "status": "isComplete",
-      "id": "Q6GNvYgwL",
-      "isComplete": true
-    },
-    {
-      "bookId": "ta",
-      "userId": "player1",
-      "status": "rented",
-      "id": "AxQa5tbpq"
-    },
-    {
-      "bookId": "ta",
-      "userId": "player1",
-      "status": "rented",
-      "id": "aNziBTUUB",
-      "isComplete": true
-    },
-    {
-      "bookId": "ta",
-      "userId": "player1",
-      "isComplete": true,
-      "id": "Xo9H96-cD"
-    },
-    {
-      "bookId": "ta",
-      "userId": "player1",
-      "id": "TMM5Ys4dl"
-    },
-    {
-      "bookId": "ta",
-      "userId": "player1",
-      "isComplete": true,
-      "id": "5cbZCEcm_"
-    },
-    {
-      "bookId": "ta",
-      "userId": "player1",
-      "isComplete": "false",
-      "id": "mnK_V7uhH"
-    },
-    {
-      "bookId": "ta",
-      "userId": "player1",
-      "isComplete": "false",
-      "id": "3ItAmCRGV"
-    },
-    {
-      "bookId": "ta",
-      "userId": "player1",
-      "isComplete": "false",
-      "id": "FPtxFy7md"
-    },
-    {
-      "bookId": "ta",
-      "userId": "player1",
-      "status": "rented",
-      "id": "GuGHUlS5I"
-    },
-    {
-      "bookId": "javascript",
-      "userId": "player1",
-      "status": "rented",
-      "id": "v4h4DB4dh"
-    },
-    {
-      "bookId": "dancing",
-      "userId": "akari sakata",
-      "status": "rented",
-      "id": "9zlXoh83h"
-    },
-    {
-      "bookId": "javascript",
-      "userId": "akari sakata",
-      "status": "4zUH5H-WGd",
-      "id": "8ckczrGNR"
-    },
-    {
-      "bookId": "javascript",
-      "userId": "akari sakata",
-      "status": "4zUH5H-WGd",
-      "id": "hvWggYXnh"
-    },
-    {
-      "bookId": "koko's story",
-      "userId": "tai",
-      "status": "v7OexRgpk",
-      "id": "ahJGWcnfE"
-    },
-    {
-      "bookId": "javascript",
-      "email": "pxmrtai97@gmail.com2",
-      "status": "4zUH5H-WGd",
-      "id": "3qSnhRJqR"
-    },
-    {
-      "bookId": "javascript",
-      "email": "pxmrtai97@gmail.co",
-      "status": "4zUH5H-WGd",
-      "id": "U3eYIy3DG"
-    },
-    {
-      "bookId": "javascript",
-      "email": "",
-      "status": "4zUH5H-WGd",
-      "id": "pv_X-fh4-"
-    },
     {
       "bookId": "javascript",
       "email": "pxmrtai97@gmail.com",
@@ -188,12 +64,6 @@
       "email": "",
       "status": "4zUH5H-WGd",
       "id": "wrN6g5sQE"
-    },
-    {
-      "bookId": "javascript",
-      "email": "",
-      "status": "4zUH5H-WGd",
-      "id": "56nZRoByF"
     },
     {
       "bookId": "javascript",
@@ -227,12 +97,6 @@
     },
     {
       "bookId": "javascript",
-      "email": "",
-      "status": "4zUH5H-WGd",
-      "id": "MtwnpGufK"
-    },
-    {
-      "bookId": "javascript",
       "email": "pxmrtai97@gmail.com",
       "status": "4zUH5H-WGd",
       "id": "Q480wlAYU"
@@ -242,48 +106,6 @@
       "email": "1231243545@gmail.com",
       "status": "4zUH5H-WGd",
       "id": "HdgJKyS-n"
-    },
-    {
-      "bookId": "javascript",
-      "email": "1231243545@gmail.com",
-      "status": "4zUH5H-WGd",
-      "id": "2CyFw2vhr"
-    },
-    {
-      "bookId": "javascript",
-      "email": "pxmrtai97@gmail.com",
-      "status": "4zUH5H-WGd",
-      "id": "yhGRTsvZE"
-    },
-    {
-      "bookId": "javascript",
-      "email": "pxmrtai97@gmail.com",
-      "status": "4zUH5H-WGd",
-      "id": "f5_35K4Dq"
-    },
-    {
-      "bookId": "javascript",
-      "email": "1231243545@gmail.com",
-      "status": "4zUH5H-WGd",
-      "id": "ZVYbwfzwh"
-    },
-    {
-      "bookId": "javascript",
-      "email": "pxmrtai97@gmail.coas",
-      "status": "4zUH5H-WGd",
-      "id": "0cpk4C3yj"
-    },
-    {
-      "bookId": "javascript",
-      "email": "pxmrtai97@gmail.com2",
-      "status": "4zUH5H-WGd",
-      "id": "_-2F3ZHox"
-    },
-    {
-      "bookId": "javascript",
-      "email": "123123s@gmail.com",
-      "status": "4zUH5H-WGd",
-      "id": "o43xonqPu"
     }
   ]
 }
