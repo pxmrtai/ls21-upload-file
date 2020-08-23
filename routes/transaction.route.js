@@ -22,7 +22,7 @@ router.get("/create",controller.createRentalList)
 
 
 
-router.post('/create',emailMiddleware.notExist, controller.postCreateRentalList)
+router.post('/create',controller.postCreateRentalList)
 // router.post('/update',(req,res)=>{
   
 // })
