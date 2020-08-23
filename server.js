@@ -32,7 +32,7 @@ app.use(cookieParser())
 db.defaults({ list: [] })
   .write()
  
-app.get('/',controller.index)
+app.get('/',authMiddleware.requireAuth, controller.index)
 app.get('/book',authMiddleware.requireAuth,controller.listBook
 //         server
 )

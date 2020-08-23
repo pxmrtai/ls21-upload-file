@@ -32,7 +32,7 @@ if(user.password !== password){
   res.cookie('userId', user.id);
   
   if(user.isAdmin){
-    res.redirect('/transaction/index')
+    res.redirect('/')
     return
   }
   

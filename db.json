@@ -39,6 +39,12 @@
       "password": "123123",
       "id": "v7OexRgpk",
       "isAdmin": true
+    },
+    {
+      "name": "nam",
+      "email": "koko@gmail.com",
+      "password": "123123",
+      "id": "j-Ge6s8fz"
     }
   ],
   "rentalList": [
