@@ -28,12 +28,13 @@ if(user.password !== password){
      });
    return;
 }
-  if(user.isAdmin===true){
-    res.redirect('transaction/index')
+  console.log({ user });
+  res.cookie('userId', user.id);
+  
+  if(user.isAdmin){
+    res.redirect('/transaction/index')
     return
   }
-  
-  res.cookie('userId', user.id)
   
   res.redirect('/users/customer')
 }
