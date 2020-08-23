@@ -37,7 +37,8 @@
       "name": "tai",
       "email": "pxmrtai97@gmail.com",
       "password": "123123",
-      "id": "v7OexRgpk"
+      "id": "v7OexRgpk",
+      "isAdmin": "true"
     }
   ],
   "rentalList": [

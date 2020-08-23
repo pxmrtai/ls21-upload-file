@@ -9,7 +9,7 @@ block navbar
   form(action="/transaction/create", method="POST")
     .form-group.d-flex
       div
-        label(for="email") email
+        label(for="email") Book Title
           select.form-control(name= "bookId")
             each val in listBook
               option(value=val.title)= val.title
@@ -17,13 +17,9 @@ block navbar
         label(for="email") email
           input#email.form-control(type="email",name='email')
       div
-        label(for="email") email
-          select.form-control(name="status")
-            each user in listUser
-              option(value= user.id)= user.id
-      div
-        select.form-control(name="isAdmin")
-            option(value= true) True
-            option(value= false) False
+        label(for="email") isAdmin
+          select.form-control(name="isAdmin")
+              option(value= true) True
+              option(value= false) False
          
     button.btn.btn-primary(type="submit") Gửi

@@ -8,6 +8,7 @@ module.exports.login = (req,res)=>{
 module.exports.postLogin = (req,res)=>{
   var email = req.body.email
  var user= db.get('user').find({email:email}).value()
+ console.log(user.isAdmin)
  var password = req.body.password
  if(!user){
      res.render('auth/login',{
@@ -27,6 +28,12 @@ if(user.password !== password){
      });
    return;
 }
+  if(user.isAdmin===true){
+    res.render('transaction/index')
+    return
+  }
+  
   res.cookie('userId', user.id)
+  
   res.redirect('/users/customer')
 }
