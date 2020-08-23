@@ -18,5 +18,6 @@ module.exports.notExist = (req,res,next)=>{
     })
      
   }
+  req.user=user
    next()
 }

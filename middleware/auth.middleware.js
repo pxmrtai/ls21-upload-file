@@ -11,5 +11,6 @@ module.exports.requireAuth = (req,res,next)=>{
      res.redirect('/auth/login');
     return
   }
+  req.user=user
   next()
 }
