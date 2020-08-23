@@ -15,10 +15,11 @@ module.exports.userLogin = (req,res)=>{
   
   if(req.cookies.userId){
   var user = db.get('user').find({id: req.cookies.userId}).value();
-  var rentalList= db.get('rentalList').value()
-  var email = db.get('user').find({email: rentalList}).value()
+  
+    
   res.render('userOnly/index',{
         user: user
+        
     })
     return
   }
