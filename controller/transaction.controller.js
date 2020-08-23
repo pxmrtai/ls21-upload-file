@@ -6,8 +6,6 @@ const shortid = require('shortid')
 
 
 module.exports.rentalIndex = (req,res)=>{
-  var rentalList= db.get('rentalList').value()
-  console.log(rentalList)
   res.render("transaction/index",{
       listBook : db.get("list").value(),
      listUser : db.get("user").value(),
