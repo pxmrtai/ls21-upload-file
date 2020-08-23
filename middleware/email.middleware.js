@@ -28,9 +28,6 @@ module.exports.existed = (req,res,next)=>{
 
   var email = req.body.email
   var user= db.get('user').find({email: email}).value()
-  console.log(user)
-  console.log('asd'+ req.body.email)
-
   if(user){
     res.render('transaction/create',{
       listBook : db.get("list").value(),

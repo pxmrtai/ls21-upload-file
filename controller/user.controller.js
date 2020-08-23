@@ -5,7 +5,6 @@ var emailMiddleware = require('../middleware/email.middleware')
 module.exports.customer = (req,res)=>{
   var listBook = db.get('list').value()
   var rentalList= db.get('rentalList').value()
-  console.log(rentalList)
   res.render('userOnly/customer',{
     list : db.get("list").value(),
     rentalList : rentalList
