@@ -26,7 +26,11 @@ module.exports.postResign = async (req,res)=>{
   console.log(req.body.password)
   
   db.get('user').push(req.body).write()
-  res.redirect('/auth/login')
+  res.render('auth/login',{
+    sucess:[
+      'sign up sucessful'
+    ]
+  })
 }
 
 module.exports.postLogin = async (req,res)=>{

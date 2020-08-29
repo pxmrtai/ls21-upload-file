@@ -35,10 +35,28 @@
       "isAdmin": true
     },
     {
-      "name": "tai",
-      "email": "coderx@gmail.com",
-      "password": "$2b$10$KKIGr8CooB5Bmv1UqVoXSutOAE11Hz8jRDb2725/sCn8yJZaYoH8C",
-      "id": "URBf8xex_"
+      "name": "akari sakata",
+      "email": "akaribakabaka@gmail.com",
+      "password": "$2b$10$vwp9G5Ncm6XT42LeFQ3KZebBc3czpXHN97/7ggZQV09jWdD97HHri",
+      "id": "8c2p42bxC"
+    },
+    {
+      "name": "tuan tai",
+      "email": "pxmrtai97@gmail.com",
+      "password": "$2b$10$xbgfB0pfd8xn6n17APAEw.YI1Lw2UUXpt.jOt8WGL1gtAKFjIs6Ly",
+      "id": "1QCQCLBk-"
+    },
+    {
+      "name": "akari sakata",
+      "email": "1231243545@gmail.com",
+      "password": "$2b$10$gsdpj9flgb4rOf3tVej41ONDE4sFZDNd7yIcHPbZFuPbR88PuvUna",
+      "id": "mZomA73_K"
+    },
+    {
+      "name": "a",
+      "email": "pxmrtai97@gmail.com2",
+      "password": "$2b$10$p/6svYaMIBAUzn.TZKejR.SrEnpbpeGQGvKoQxIJL4vTy.asqbsUW",
+      "id": "WbES3l9FO"
     }
   ],
   "rentalList": [

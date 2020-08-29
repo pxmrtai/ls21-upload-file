@@ -17,7 +17,6 @@ db.defaults({ user: [] })
   .write()
 
 router.get('/index', controller.index)
-router.get('/create',emailMiddleware.existed, controller.createUser)
 router.get('/customer',controller.customer)
 router.get('/userLogin',controller.userLogin)
 

@@ -5,6 +5,9 @@ block navbar
   if errors
       each error in errors
           .alert.alert-danger= error
+  if sucess
+      each notice in sucess
+          .alert.alert-info= sucess
     
   form( method="POST")
         .form-group
@@ -14,5 +17,5 @@ block navbar
             label(for="password") Password
             input#password.form-control(type="password",name='password', value=values ? values.password : '')
         button.btn.btn-primary Login
-  a(href="/auth/resign") RESIGN
+  a.btn.btn-primary(href="/auth/resign") sign up
     
