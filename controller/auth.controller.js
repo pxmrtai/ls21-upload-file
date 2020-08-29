@@ -59,11 +59,11 @@ module.exports.postLogin = async (req,res)=>{
   }
   
   
-  
+  res.cookie('userId', user.id);
   if(user.isAdmin){
     return res.redirect('/')
   }
-   res.cookie('userId', user.id);
+   
  
   res.redirect('/users/customer')
 }

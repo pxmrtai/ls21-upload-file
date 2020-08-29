@@ -44,7 +44,8 @@
       "name": "tuan tai",
       "email": "pxmrtai97@gmail.com",
       "password": "$2b$10$xbgfB0pfd8xn6n17APAEw.YI1Lw2UUXpt.jOt8WGL1gtAKFjIs6Ly",
-      "id": "1QCQCLBk-"
+      "id": "1QCQCLBk-",
+      "isAdmin": true
     },
     {
       "name": "akari sakata",
@@ -125,6 +126,11 @@
       "email": "pxmrtai97@gmail.com",
       "status": "4zUH5H-WGd",
       "id": "janSZnw0J"
+    },
+    {
+      "bookId": "aasd",
+      "email": "pxmrtai97@gmail.com2",
+      "id": "jV6Of7ZHi"
     }
   ]
 }
