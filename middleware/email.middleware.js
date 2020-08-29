@@ -29,7 +29,7 @@ module.exports.existed = (req,res,next)=>{
   var email = req.body.email
   var user= db.get('user').find({email: email}).value()
   if(user){
-    res.render('transaction/create',{
+    res.render('auth/resign',{
       listBook : db.get("list").value(),
      listUser : db.get("user").value(),
      status : db.get("rentalList").value(),

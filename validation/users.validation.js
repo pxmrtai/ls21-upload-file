@@ -12,7 +12,7 @@ module.exports.createUser = (req,res,next)=>{
       errors.push('Name is quired')``
     }
     if(errors.length){
-      res.render('users/create',{
+      res.render('auth/resign',{
      errors: errors
         
   })

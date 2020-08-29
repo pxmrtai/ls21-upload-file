@@ -16,6 +16,7 @@ module.exports.login = (req,res)=>{
   res.render('auth/login')
 
 }
+
 module.exports.postResign = async (req,res)=>{
   var password = req.body.password;
    req.body.id = shortid.generate();
@@ -27,6 +28,7 @@ module.exports.postResign = async (req,res)=>{
   db.get('user').push(req.body).write()
   res.redirect('/auth/login')
 }
+
 module.exports.postLogin = async (req,res)=>{
   var email = req.body.email
   var password = req.body.password
@@ -41,10 +43,6 @@ module.exports.postLogin = async (req,res)=>{
        values: req.body
      });
   }
-  
-  // bạn code logic compare đi, dùng async await
-  // cái biến hash kia bạn phải lôi từ database ra, sai sai, bạn đã có biến user phía trên rồi
-  // dạ...
   var isCorrectPassword = await bcrypt.compare(password, user.password);
   
   if(!isCorrectPassword){
@@ -65,13 +63,3 @@ module.exports.postLogin = async (req,res)=>{
  
   res.redirect('/users/customer')
 }
-
-
- 
-  // alo ạ
-  // anh có thấy không ạ?
-  /// alo ạ
-// ạdkasdhkjdahskdkadákhdaskaajjasáddaaádasdasdasdsadadasdasdadasdasdadsadasdasdasdasdasdasdasdasdasda
-
-// bạn gõ đi
-// no
