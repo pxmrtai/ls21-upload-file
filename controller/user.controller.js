@@ -58,9 +58,7 @@ module.exports.createUser =(req,res)=>{
   
 }
 module.exports.postIndex = (req,res)=>{
-  bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash) {
-    // Store hash in your password DB.
-});
+
   
   
   req.body.id = shortid.generate();

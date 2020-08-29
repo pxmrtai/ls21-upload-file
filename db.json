@@ -76,6 +76,11 @@
       "name": "tuantai",
       "email": "tauntai@gmail.com",
       "password": "123123"
+    },
+    {
+      "name": "123",
+      "email": "1231243545@gmail.com",
+      "password": "$2b$10$xCoK3rjU9gqk3f924Y845O/lcF/iHyc1qqDCA1RNzgf38YWPGmY1u"
     }
   ],
   "rentalList": [

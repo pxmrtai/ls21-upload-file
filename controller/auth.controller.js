@@ -1,5 +1,7 @@
 const md5 = require('md5')
 const db = require('../db')
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 
 module.exports.resign=(req,res)=>{
@@ -11,17 +13,22 @@ module.exports.login = (req,res)=>{
   res.render('auth/login')
 
 }
-module.exports.postResign = (req,res)=>{
-    db.get('user').push(req.body).write()
-  res.redirect('/auth/login')
+module.exports.postResign = async (req,res)=>{
+  var password = req.body.password;
+
+  var hashPassword = await bcrypt.hash(password, saltRounds);
+  req.body.password = hashPassword;
+  console.log(req.body.password)
   
+  db.get('user').push(req.body).write()
+  res.redirect('/auth/login')
 }
 module.exports.postLogin = (req,res)=>{
-var email = req.body.email
- var user= db.get('user').find({email:email}).value()
- console.log(user.isAdmin)
- var password = req.body.password
- if(!user){
+  var email = req.body.email
+  var user= db.get('user').find({email:email}).value()
+  var password = req.body.password
+  
+  if(!user){
      res.render('auth/login',{
        errors:[
          'User does not exist.'
@@ -29,8 +36,8 @@ var email = req.body.email
        values: req.body
      });
    return;
- }
-  var hashedPassword= md5(password)
+  }
+    var hashedPassword= md5(password)
 if(user.password !== hashedPassword){
   res.render('auth/login',{
        errors:[
