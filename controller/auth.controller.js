@@ -2,12 +2,20 @@ const md5 = require('md5')
 const db = require('../db')
 
 
+module.exports.resign=(req,res)=>{
+  res.render('auth/resign')
+  res.redirect('/auth/login')
+}
+
 module.exports.login = (req,res)=>{
   res.render('auth/login')
 
 }
+module.exports.postResign = (req,res)=>{
+    db.get('user').push(req.body).write()
+}
 module.exports.postLogin = (req,res)=>{
-  var email = req.body.email
+var email = req.body.email
  var user= db.get('user').find({email:email}).value()
  console.log(user.isAdmin)
  var password = req.body.password
