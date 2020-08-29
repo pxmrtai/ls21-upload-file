@@ -2,6 +2,8 @@ const md5 = require('md5')
 const db = require('../db')
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+const shortid = require('shortid')
+
 
 
 module.exports.resign=(req,res)=>{
@@ -15,6 +17,7 @@ module.exports.login = (req,res)=>{
 }
 module.exports.postResign = async (req,res)=>{
   var password = req.body.password;
+   req.body.id = shortid.generate();
 
   var hashPassword = await bcrypt.hash(password, saltRounds);
   req.body.password = hashPassword;
@@ -26,7 +29,7 @@ module.exports.postResign = async (req,res)=>{
 module.exports.postLogin = async (req,res)=>{
   var email = req.body.email
   var password = req.body.password
-
+ 
   var user= db.get('user').find({email:email}).value()
   
   if(!user){
@@ -52,11 +55,12 @@ module.exports.postLogin = async (req,res)=>{
    });
   }
   
-  res.cookie('userId', user.id);
+  
   
   if(user.isAdmin){
     return res.redirect('/')
   }
-  
-  res.redirect('/users')
+   res.cookie('userId', user.id);
+ 
+  res.redirect('/users/customer')
 }
