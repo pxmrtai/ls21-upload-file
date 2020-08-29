@@ -23,39 +23,40 @@ module.exports.postResign = async (req,res)=>{
   db.get('user').push(req.body).write()
   res.redirect('/auth/login')
 }
-module.exports.postLogin = (req,res)=>{
+module.exports.postLogin = async (req,res)=>{
   var email = req.body.email
-  var user= db.get('user').find({email:email}).value()
   var password = req.body.password
+
+  var user= db.get('user').find({email:email}).value()
   
   if(!user){
-     res.render('auth/login',{
+     return res.render('auth/login',{
        errors:[
          'User does not exist.'
        ],
        values: req.body
      });
-   return;
   }
-    var hashedPassword= md5(password)
-if(user.password !== hashedPassword){
-  res.render('auth/login',{
-       errors:[
+  
+  // bạn code logic compare đi, dùng async await
+  // cái biến hash kia bạn phải lôi từ database ra, sai sai, bạn đã có biến user phía trên rồi
+  // dạ...
+  var isCorrectPassword = await bcrypt.compare(password, user.password);
+  
+  if(!isCorrectPassword){
+    return res.render('auth/login',{
+      errors:[
          'Wrong password.'
        ],
-    values: req.body
-     });
-   return;
-}
-  console.log({ user });
+      values: req.body
+   });
+  }
+  
   res.cookie('userId', user.id);
   
   if(user.isAdmin){
-    res.redirect('/')
-    return
+    return res.redirect('/')
   }
   
-  res.redirect('/users/customer')
+  res.redirect('/users')
 }
-// giải thích cho anh xem hiện tại nó ra sao, và em muốn nó thành thế nào
-// chỉ đơn giản là khoonget s em cứ nói đi nah có nghe thấy
