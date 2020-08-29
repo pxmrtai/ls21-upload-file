@@ -4,7 +4,7 @@ const db = require('../db')
 
 module.exports.resign=(req,res)=>{
   res.render('auth/resign')
-  res.redirect('/auth/login')
+ 
 }
 
 module.exports.login = (req,res)=>{
@@ -13,6 +13,8 @@ module.exports.login = (req,res)=>{
 }
 module.exports.postResign = (req,res)=>{
     db.get('user').push(req.body).write()
+  res.redirect('/auth/login')
+  
 }
 module.exports.postLogin = (req,res)=>{
 var email = req.body.email

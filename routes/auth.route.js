@@ -8,5 +8,6 @@ router.get('/login',controller.login)
 router.get('/resign',controller.resign)
 
 router.post('/login',controller.postLogin)
+router.post('/resign',controller.postResign)
 
 module.exports= router;
