@@ -1,6 +1,10 @@
 const db = require('../db')
 const shortid = require('shortid')
 var emailMiddleware = require('../middleware/email.middleware')
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+const myPlaintextPassword = 's0/\/\P4$$w0rD';
+const someOtherPlaintextPassword = 'not_bacon';
 
 module.exports.customer = (req,res)=>{
   var listBook = db.get('list').value()
@@ -54,6 +58,11 @@ module.exports.createUser =(req,res)=>{
   
 }
 module.exports.postIndex = (req,res)=>{
+  bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash) {
+    // Store hash in your password DB.
+});
+  
+  
   req.body.id = shortid.generate();
   var email = req.body.email
  var user= db.get('user').find({email:email}).value()

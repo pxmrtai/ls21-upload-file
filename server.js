@@ -9,6 +9,10 @@ const adapter = new FileSync('db.json')
 const db = low(adapter)
 const bodyParser = require('body-parser')
 
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+const myPlaintextPassword = 's0/\/\P4$$w0rD';
+const someOtherPlaintextPassword = 'not_bacon';
 
 var userRoute = require('./routes/users.route');
 var authRoute = require('./routes/auth.route');
