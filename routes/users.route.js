@@ -27,6 +27,6 @@ router.get('/:id',controller.view)
 
 router.get("/index/:id/delete",controller.delete)
 
-router.post('/index',validation.createUser,controller.postIndex)
+
 
 module.exports = router;

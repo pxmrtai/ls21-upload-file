@@ -6,6 +6,7 @@ const shortid = require('shortid')
 
 
 
+
 module.exports.resign=(req,res)=>{
   res.render('auth/resign')
  
