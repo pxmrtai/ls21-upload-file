@@ -64,3 +64,13 @@ module.exports.postLogin = async (req,res)=>{
  
   res.redirect('/users/customer')
 }
+
+
+ 
+  // alo ạ
+  // anh có thấy không ạ?
+  /// alo ạ
+// ạdkasdhkjdahskdkadákhdaskaajjasáddaaádasdasdasdsadadasdasdadasdasdadsadasdasdasdasdasdasdasdasdasda
+
+// bạn gõ đi
+// no

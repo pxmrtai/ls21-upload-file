@@ -28,66 +28,11 @@
   ],
   "user": [
     {
-      "name": "akari sakata",
-      "id": "4zUH5H-WGd",
-      "email": "akaribakabaka@gmail.com",
-      "password": "4297f44b13955235245b2497399d7a93"
-    },
-    {
-      "name": "tai",
-      "email": "pxmrtai97@gmail.com",
-      "password": "4297f44b13955235245b2497399d7a93",
-      "id": "v7OexRgpk",
-      "isAdmin": true
-    },
-    {
-      "name": "nam",
-      "email": "koko@gmail.com",
-      "password": "123123",
-      "id": "j-Ge6s8fz"
-    },
-    {
-      "name": "bui tuan tai",
-      "email": "tuantai@gmail.com",
-      "password": "123123",
-      "id": "OTMWtesA8"
-    },
-    {
-      "name": "asasd",
-      "email": "haha@gmail.com",
-      "password": "123123"
-    },
-    {
-      "name": "asasd",
-      "email": "haha@gmail.com",
-      "password": "123123"
-    },
-    {
-      "name": "123123",
-      "email": "papa@gmail.com",
-      "password": "123123"
-    },
-    {
-      "name": "asdasd",
-      "email": "asdasd@gmail.com",
-      "password": "123123"
-    },
-    {
-      "name": "tuantai",
-      "email": "tauntai@gmail.com",
-      "password": "123123"
-    },
-    {
-      "name": "123",
-      "email": "1231243545@gmail.com",
-      "password": "$2b$10$xCoK3rjU9gqk3f924Y845O/lcF/iHyc1qqDCA1RNzgf38YWPGmY1u"
-    },
-    {
       "name": "tai",
       "email": "coderx@gmail.com",
       "password": "$2b$10$53FZ4cK87B2v15iljpOYFeTe81NbDwU2lBkpoS0QOwGyz53BPql76",
       "id": "-Pitf1TC3",
-          "isAdmin": true
+      "isAdmin": true
     }
   ],
   "rentalList": [
