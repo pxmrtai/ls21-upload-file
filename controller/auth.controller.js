@@ -55,7 +55,7 @@ module.exports.postLogin = async (req,res)=>{
     console.log(wrongTime)
     if(wrongTime>3){
        console.log('asd')
-      var lala = db.update('count')
+      var lala = db.get('count').assign({count:0}).value()
       return console.log(lala)
     }
      return res.render('auth/login',{
