@@ -46,7 +46,7 @@
       "password": "$2b$10$xbgfB0pfd8xn6n17APAEw.YI1Lw2UUXpt.jOt8WGL1gtAKFjIs6Ly",
       "id": "1QCQCLBk-",
       "isAdmin": true,
-      "isLogin": 1
+      "isLogin": 0
     },
     {
       "name": "akari sakata",
@@ -58,8 +58,7 @@
       "name": "a",
       "email": "pxmrtai97@gmail.com2",
       "password": "$2b$10$p/6svYaMIBAUzn.TZKejR.SrEnpbpeGQGvKoQxIJL4vTy.asqbsUW",
-      "id": "WbES3l9FO",
-      "isLogin": null
+      "id": "WbES3l9FO"
     }
   ],
   "rentalList": [
@@ -134,6 +133,5 @@
       "email": "pxmrtai97@gmail.com2",
       "id": "jV6Of7ZHi"
     }
-  ],
-  "count": 15
+  ]
 }

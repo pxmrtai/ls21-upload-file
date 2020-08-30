@@ -3,6 +3,7 @@ const db = require('../db')
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const shortid = require('shortid')
+var nodemailer = require('nodemailer');
 
 
 
@@ -23,7 +24,6 @@ module.exports.postResign = async (req,res)=>{
 
   var hashPassword = await bcrypt.hash(password, saltRounds);
   req.body.password = hashPassword;
-  console.log(req.body.password)
   
   db.get('user').push(req.body).write()
   res.render('auth/login',{
@@ -36,28 +36,11 @@ module.exports.postResign = async (req,res)=>{
 module.exports.postLogin = async (req,res)=>{
   var email = req.body.email
   var password = req.body.password
- 
 
- 
   var user= db.get('user').find({email:email}).value()
   
   if(!user){
-  //   var wrongTime = db.get('login').value()
-  //   console.log(wrongTime)
-  //    var dbs=db.get('login')
-  //      .find({userNameWrong:wrongTime.userNameWrong})
-  //      .assign({userNameWrong: wrongTime.userNameWrong+1})
-  //      .write()
-  // console.log(dbs)
-    var count = db.update('count', n => n + 1)
-  .write()
-    var wrongTime = db.get('count').value()
-    console.log(wrongTime)
-    if(wrongTime>3){
-       console.log('asd')
-      var lala = db.get('count').assign({count:0}).value()
-      return console.log(lala)
-    }
+  
      return res.render('auth/login',{
        
        errors:[
@@ -73,9 +56,43 @@ module.exports.postLogin = async (req,res)=>{
    
       var email = req.body.email
      
-    var a=  db.get('user').find({email:email}).assign({isLogin: user.isLogin+1}).write()
-    console.log(a)
+   
+var wrongTime=  db.get('user')
+.find({email:email})
+.assign({isLogin: user.isLogin+1})
+.write()
+console.log(wrongTime)
+    if(wrongTime.isLogin>3){
       
+      var a= db.get('user').find({email:email})
+.assign({isLogin: 0})
+.write()
+     var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+           user: process.env.EMAIL_SECRET,
+           pass: process.env.PASSWORD_SECRET
+       }
+   });
+      const mailOptions = {
+    from: 'tuantaitest97@gmail.com', // sender address
+    to: 'pxmrtai97@gmail.com', // list of receivers
+    subject: 'Subject of your email', // Subject line
+    html: '<b>Hello world?</b>'// plain text body
+  };
+       transporter.sendMail(mailOptions, function (err, info) {
+    if(err)
+      console.log(err)
+    else
+      console.log(info);
+ });
+    }
+      
+    
+    
+    
+    
+    
     return res.render('auth/login',{
       errors:[
          'Wrong password.'
