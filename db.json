@@ -102,8 +102,50 @@
       "name": "test",
       "email": "test@gmail.com",
       "password": "$2b$10$27E1sFlu48u6mmxBT57obuW9fievR4AvQO/bTmK56Zwwp.aO39Gjy",
-      "isLogin": "0",
+      "isLogin": 0,
       "id": "52_MG7riv"
+    },
+    {
+      "name": "33",
+      "email": "33@gmail.com",
+      "password": "$2b$10$9240BnKJfe9B7KLwS0W1..sbKDjCCUdoBN2W3CEpx//j.YgbHt4Xa",
+      "isLogin": 0,
+      "id": "0KYCcTLfb"
+    },
+    {
+      "name": "44",
+      "email": "44@gmail.com",
+      "password": "$2b$10$4VN4oxCCwnfHIMSu5LvaMeLtmbokgYefB.R3OJSYD03pkG1WF1MFS",
+      "isLogin": 0,
+      "id": "unp4mUhX3"
+    },
+    {
+      "name": "55",
+      "email": "55@gmail.com",
+      "password": "$2b$10$CtHjtFLPD03Yjv0aQhkXz.e/Q7Ax7Ueaw.Hry.6wIz.yQxyTwh35.",
+      "isLogin": 0,
+      "id": "MOx4nVCU9"
+    },
+    {
+      "name": "66",
+      "email": "66@gmail.com",
+      "password": "$2b$10$m3/fOiVrC3m/hbVzkKlINeTaLl2sihoavFWQGP8ROVvLNLxFBAp8e",
+      "isLogin": "",
+      "id": "HHIjsZdTQ"
+    },
+    {
+      "name": "77",
+      "email": "77@gmail.com",
+      "password": "$2b$10$tYLWnMDibuCprtJ/rvz4hua2DYeFJLGTfr7En9uK33BAdFgel2IHy",
+      "isLogin": "",
+      "id": "S3c63_BWx"
+    },
+    {
+      "name": "123123123",
+      "email": "123123123@gmail.com",
+      "password": "$2b$10$Zh.3qh04ZXm3dm/C.nGSOeptbFvHQzdux.EM2pOOuAzdNkfMbxVVu",
+      "isLogin": "",
+      "id": "JctcSmPAI"
     }
   ],
   "rentalList": [
