@@ -62,6 +62,20 @@
       "password": "$2b$10$p/6svYaMIBAUzn.TZKejR.SrEnpbpeGQGvKoQxIJL4vTy.asqbsUW",
       "id": "WbES3l9FO",
       "isLogin": 0
+    },
+    {
+      "name": "koko2",
+      "email": "koko2@gmail.com",
+      "password": "$2b$10$Wx4F9X4.RYvYz7dJ8i7ZWum3JF/so0P9qjTkLVKMRZVCvzAkO.JzS",
+      "id": "v-oGE0X66",
+      "isLogin": 2
+    },
+    {
+      "name": "koko",
+      "email": "kokochan@gmail.com",
+      "password": "$2b$10$2QLohF.fKTrUmgxGSllbbu6wTbGM.8opYSAMuOeeh4Qe5y5CgrRwq",
+      "id": "U3YMtuNOj",
+      "isLogin": 1
     }
   ],
   "rentalList": [

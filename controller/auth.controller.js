@@ -58,10 +58,9 @@ module.exports.postLogin = async (req,res)=>{
   var isCorrectPassword = await bcrypt.compare(password, user.password);
   
   if(!isCorrectPassword){
-   
-      var email = req.body.email
-     
-   
+   var email = req.body.email
+    var user= db.get('user').find({email:email}).value()
+    console.log(user)
 var wrongTime=  db.get('user')
 .find({email:email})
 .assign({isLogin: user.isLogin+1})
