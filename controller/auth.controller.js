@@ -59,7 +59,8 @@ module.exports.postLogin = async (req,res)=>{
   
   if(!isCorrectPassword){
    
-    
+    db.get('user').update(user.isLoginFail,n=>n+1).write()
+    console.log(user.isLoginFail)
     return res.render('auth/login',{
       errors:[
          'Wrong password.'
