@@ -56,9 +56,9 @@ module.exports.postLogin = async (req,res)=>{
   
   if(!isCorrectPassword){
    
-      
+      var email = req.body.email
      
-    var a=  db.get('user').find({email:email}).assign({isLogin: user.isLogin+1})
+    var a=  db.get('user').find({email:email}).assign({isLogin: user.isLogin+1}).write()
     console.log(a)
       
     return res.render('auth/login',{
