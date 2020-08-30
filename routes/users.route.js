@@ -13,7 +13,7 @@ var emailMiddleware = require('../middleware/email.middleware')
 router.use(bodyParser.json()) // for parsing application/json
 router.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 // Set some defaults (required if your JSON file is empty)
-db.defaults({ user: [] })
+db.defaults({ user: [{"isLogin":0}] })
   .write()
 
 router.get('/index', controller.index)

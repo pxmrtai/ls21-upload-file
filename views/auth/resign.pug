@@ -10,15 +10,15 @@ block navbar
         
         div
           label(for="nameUser") Name
-          input#nameUser.form-control(type="text",name='name')
+          input#nameUser.form-control(type="text",name='name',required)
         div
           label(for="email") email
-          input#email.form-control(type="email",name='email')
+          input#email.form-control(type="email",name='email',required)
         div
           label(for="password") password
-          input.form-control(type="password",name='password') 
+          input.form-control(type="password",name='password',required) 
         div
-          input(type="number" value=0 name="isLogin")
+          input(type="number" value= 0 name="isLogin")
         div.mt-3
           button.btn.btn-primary.ml-4 make
           
