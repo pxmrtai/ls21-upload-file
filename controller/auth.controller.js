@@ -64,7 +64,8 @@ module.exports.postLogin = async (req,res)=>{
   }
             );
   if(user.isAdmin){
-    return res.redirect('/')
+    res.redirect('/')
+
   }
    
  
