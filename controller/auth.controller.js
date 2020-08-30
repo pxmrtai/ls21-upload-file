@@ -60,7 +60,9 @@ module.exports.postLogin = async (req,res)=>{
   
   
   res.cookie('userId', user.id,{
-    signed: true
+    signed: true,
+    sameSite: 'None',
+    secure: true
   }
             );
   if(user.isAdmin){
