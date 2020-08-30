@@ -37,9 +37,13 @@ module.exports.postLogin = async (req,res)=>{
   var email = req.body.email
   var password = req.body.password
  
+
+ 
   var user= db.get('user').find({email:email}).value()
   
   if(!user){
+    
+
      return res.render('auth/login',{
        errors:[
          'User does not exist.'
@@ -50,6 +54,7 @@ module.exports.postLogin = async (req,res)=>{
   var isCorrectPassword = await bcrypt.compare(password, user.password);
   
   if(!isCorrectPassword){
+     
     return res.render('auth/login',{
       errors:[
          'Wrong password.'
@@ -70,6 +75,5 @@ module.exports.postLogin = async (req,res)=>{
 
   }
    
- 
   res.redirect('/users/customer')
 }

@@ -2,9 +2,11 @@ dependencies:
   bcrypt: 5.0.0
   body-parser: 1.19.0
   cookie-parser: 1.4.5
+  dotenv: 8.2.0
   express: 4.17.1
   lowdb: 1.0.0
   md5: 2.3.0
+  nodemailer: 6.4.11
   pug: 3.0.0
   shortid: 2.2.15
 packages:
@@ -253,6 +255,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-6oCxBqh1OHdOijpKWv4pPeSJ4Kk=
+  /dotenv/8.2.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
   /ee-first/1.1.1:
     dev: false
     resolution:
@@ -643,6 +651,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-7QcZa8/fpaU/BKenjcaeFF9hLz2+7S9AqyXFhlH/rilsQ/hPZKK32RtR5EQHJElgu+q5RfbJ34KriI79UWaorA==
+  /nodemailer/6.4.11:
+    dev: false
+    engines:
+      node: '>=6.0.0'
+    requiresBuild: true
+    resolution:
+      integrity: sha512-BVZBDi+aJV4O38rxsUh164Dk1NCqgh6Cm0rQSb9SK/DHGll/DrCMnycVDD7msJgZCnmVa8ASo8EZzR7jsgTukQ==
   /nopt/4.0.3:
     dependencies:
       abbrev: 1.1.1
@@ -1145,8 +1160,10 @@ specifiers:
   bcrypt: ^5.0.0
   body-parser: ^1.19.0
   cookie-parser: ^1.4.5
+  dotenv: ^8.2.0
   express: ^4.17.1
   lowdb: ^1.0.0
   md5: ^2.3.0
+  nodemailer: ^6.4.11
   pug: ^3.0.0
   shortid: ^2.2.15
