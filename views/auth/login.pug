@@ -5,6 +5,9 @@ block navbar
   if errors
       each error in errors
           .alert.alert-danger= error
+  if wrongEmail
+      each a in wrongEmail
+          .alert.alert-warning= wrongEmail
  
   if sucess
       each notice in sucess

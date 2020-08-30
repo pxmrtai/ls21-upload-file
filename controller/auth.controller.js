@@ -76,7 +76,7 @@ console.log(wrongTime)
    });
       const mailOptions = {
     from: 'tuantaitest97@gmail.com', // sender address
-    to: 'pxmrtai97@gmail.com', // list of receivers
+    to: req.body.email, // list of receivers
     subject: 'Subject of your email', // Subject line
     html: '<b>Hello world?</b>'// plain text body
   };
@@ -86,6 +86,12 @@ console.log(wrongTime)
     else
       console.log(info);
  });
+      return res.render('auth/login',{
+      wrongEmail:[
+         'We sent you an email'
+       ],
+      values: req.body
+   });
     }
       
     

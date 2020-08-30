@@ -38,7 +38,8 @@
       "name": "akari sakata",
       "email": "akaribakabaka@gmail.com",
       "password": "$2b$10$vwp9G5Ncm6XT42LeFQ3KZebBc3czpXHN97/7ggZQV09jWdD97HHri",
-      "id": "8c2p42bxC"
+      "id": "8c2p42bxC",
+      "isLogin": 2
     },
     {
       "name": "tuan tai",
@@ -52,13 +53,27 @@
       "name": "akari sakata",
       "email": "1231243545@gmail.com",
       "password": "$2b$10$gsdpj9flgb4rOf3tVej41ONDE4sFZDNd7yIcHPbZFuPbR88PuvUna",
-      "id": "mZomA73_K"
+      "id": "mZomA73_K",
+      "isLogin": 0
     },
     {
       "name": "a",
       "email": "pxmrtai97@gmail.com2",
       "password": "$2b$10$p/6svYaMIBAUzn.TZKejR.SrEnpbpeGQGvKoQxIJL4vTy.asqbsUW",
-      "id": "WbES3l9FO"
+      "id": "WbES3l9FO",
+      "isLogin": 0
+    },
+    {
+      "name": "koko",
+      "email": "kokochan@gmail.com",
+      "password": "$2b$10$OTMjvZD35guvUvurZHgBL.Rm6UejC/.vKXB/KL9Pi9Sj8pz7dcpAi",
+      "id": "G9EYbpoJC"
+    },
+    {
+      "name": "koko2",
+      "email": "koko2@gmail.com",
+      "password": "$2b$10$AjSplOEel8.jyGsBIAZKH.0nmO8OtFJARcrFwK1ga6OEnMutQttpe",
+      "id": "BUVb-3n3r"
     }
   ],
   "rentalList": [
