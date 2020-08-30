@@ -51,12 +51,12 @@ module.exports.postLogin = async (req,res)=>{
   // console.log(dbs)
     var count = db.update('count', n => n + 1)
   .write()
-    var wrongTime = count
+    var wrongTime = db.get('count').value()
     console.log(wrongTime)
-    if(count>3){
-       console.log(count)
-      return db.get('count').find({count:count}).assign({count:0}).write()
-      
+    if(wrongTime>3){
+       console.log('asd')
+      var lala = db.update('count')
+      return console.log(lala)
     }
      return res.render('auth/login',{
        
