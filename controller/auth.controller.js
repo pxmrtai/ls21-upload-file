@@ -20,12 +20,17 @@ module.exports.login = (req,res)=>{
 
 module.exports.postResign = async (req,res)=>{
   var password = req.body.password;
+  var email= req.body.email
    req.body.id = shortid.generate();
 
   var hashPassword = await bcrypt.hash(password, saltRounds);
   req.body.password = hashPassword;
   
   db.get('user').push(req.body).write()
+  var b=db.get('user').find({email:email})
+.push({isLogin: 1})
+.write()
+  console.log(b)
   res.render('auth/login',{
     sucess:[
       'sign up sucessful'
