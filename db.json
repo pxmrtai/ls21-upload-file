@@ -66,14 +66,16 @@
     {
       "name": "koko",
       "email": "kokochan@gmail.com",
-      "password": "$2b$10$OTMjvZD35guvUvurZHgBL.Rm6UejC/.vKXB/KL9Pi9Sj8pz7dcpAi",
-      "id": "G9EYbpoJC"
+      "password": "$2b$10$aleljt3RvwostFtAKvMej.U3H6bvgijZx/it62u8f0RnHgJp1Lns2",
+      "isLogin": 0,
+      "id": "YLOszsrRR"
     },
     {
       "name": "koko2",
       "email": "koko2@gmail.com",
-      "password": "$2b$10$AjSplOEel8.jyGsBIAZKH.0nmO8OtFJARcrFwK1ga6OEnMutQttpe",
-      "id": "BUVb-3n3r"
+      "password": "$2b$10$Ch/.aFxK7Ik/vX8MzOZE0.ljKCT9adjVhGicSjrI3l2pUsy7J0yL.",
+      "isLogin": "0",
+      "id": "t2vp_vu9Y"
     }
   ],
   "rentalList": [
