@@ -60,6 +60,11 @@ module.exports.postLogin = async (req,res)=>{
   if(!isCorrectPassword){
    var email = req.body.email
     var user= db.get('user').find({email:email}).value()
+    if(!user.isLogin){var check= db.get('user').find({email:email})
+.assign({isLogin: 1})
+.write()
+    console.log('check'+check)}
+    
     console.log(user)
 var wrongTime=  db.get('user')
 .find({email:email})

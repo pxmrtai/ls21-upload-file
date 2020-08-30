@@ -76,6 +76,34 @@
       "password": "$2b$10$2QLohF.fKTrUmgxGSllbbu6wTbGM.8opYSAMuOeeh4Qe5y5CgrRwq",
       "id": "U3YMtuNOj",
       "isLogin": 1
+    },
+    {
+      "name": "123",
+      "email": "123@gmail.com",
+      "password": "$2b$10$04YrI9c3Yx0AIKCRrOn5.O2w.fP.QZE1T4OqUuELhu66Y0siw4FJ6",
+      "id": "k9OKXXHWt",
+      "isLogin": 2
+    },
+    {
+      "name": "123123",
+      "email": "123123@gmail.com",
+      "password": "$2b$10$BJeLiyh0wKjIwVpcXAgFvu29EpcJr4qsqxfkEQud2wq38OKmfKuKK",
+      "id": "58HEQJz35",
+      "isLogin": 0
+    },
+    {
+      "name": "111",
+      "email": "111@gmail.com",
+      "password": "$2b$10$Y8E5K2IkdqOPYXE./BtcBeC8hXmEwyKyLfuXY2FTSwxJUsES4OwT2",
+      "isLogin": 0,
+      "id": "C2V7aAngT"
+    },
+    {
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "$2b$10$27E1sFlu48u6mmxBT57obuW9fievR4AvQO/bTmK56Zwwp.aO39Gjy",
+      "isLogin": "0",
+      "id": "52_MG7riv"
     }
   ],
   "rentalList": [
