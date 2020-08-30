@@ -49,8 +49,15 @@ module.exports.postLogin = async (req,res)=>{
   //      .assign({userNameWrong: wrongTime.userNameWrong+1})
   //      .write()
   // console.log(dbs)
-    db.update('count', n => n + 1)
+    var count = db.update('count', n => n + 1)
   .write()
+    var wrongTime = count
+    console.log(wrongTime)
+    if(count>3){
+       console.log(count)
+      return db.get('count').find({count:count}).assign({count:0}).write()
+      
+    }
      return res.render('auth/login',{
        
        errors:[
