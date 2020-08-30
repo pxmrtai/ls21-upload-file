@@ -1,4 +1,6 @@
+require('dotenv').config();
 const express = require('express')
+
 const app = express()
 const port = 5000
 var cookieParser = require('cookie-parser') 
@@ -21,13 +23,11 @@ var counting = require('./middleware/count.middleware')
 var controller = require ('./controller/bookList.controller')
 var authMiddleware = require('./middleware/auth.middleware')
 
-
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true })) 
-app.use(cookieParser('asdasdasdasdasdasdasdas'))
-
 app.set('view engine', 'pug')
 app.set('views', './views')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true })) 
+app.use(cookieParser(process.env.SESSION_SECRET))
 
 db.defaults({ list: [] })
   .write()
