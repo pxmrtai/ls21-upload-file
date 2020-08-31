@@ -100,13 +100,32 @@
       "name": "44",
       "email": "44@gmail.com",
       "password": "$2b$10$cZTOi1eNr.xWGZ9.Wo9igOzWUFs6nEXIoGU8n1gfBSmZqTAVkTrIG",
-      "id": "Iv8wbuqDO"
+      "id": "Iv8wbuqDO",
+      "isLogin": 1
     },
     {
       "name": "55",
       "email": "55@gmail.com",
       "password": "$2b$10$UqitoacQo2DWGzQtnxcDa.XeImKBKWtS6o6yBS9NB4cCmwpbw6Wqq",
       "id": "nMOYdOBuq"
+    },
+    {
+      "name": "77",
+      "email": "77@gmail.com",
+      "password": "$2b$10$FBt6mzZQFFJJ2J4ikiIF6Ow4oV5.5Goz3qK9KOyLdCCDL6sGV9QsC",
+      "id": "psO9ihq5G"
+    },
+    {
+      "email": "77@gmail.com",
+      "password": "$2b$10$E2pebAnSaEZxdijDnDDeD.QAJARRAftctsmOPBYk5/yzx/ecjcedq",
+      "id": "ryMMgE-11"
+    },
+    {
+      "name": "88",
+      "email": "88@gmail.com",
+      "password": "$2b$10$wnE4cGp4EYXiKX.zQI5hFuwI83jmyEAY7v5Tx5J/oZVYqAXZUzBsC",
+      "id": "UUgj5Iihi",
+      "isLogin": 0
     }
   ],
   "rentalList": [
