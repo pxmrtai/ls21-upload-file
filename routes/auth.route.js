@@ -12,5 +12,5 @@ router.get('/login',controller.login)
 router.get('/resign',emailMiddleware.existed,controller.resign)
 
 router.post('/login',controller.postLogin)
-router.post('/resign',validation.createUser,emailMiddleware.existed,controller.postResign)
+router.post('/resign',emailMiddleware.existed,controller.postResign)
 module.exports= router;
