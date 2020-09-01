@@ -1,3 +1,4 @@
+require("dotenv").config();
 const md5 = require('md5')
 const db = require('../db')
 const bcrypt = require('bcrypt');

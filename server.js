@@ -29,6 +29,7 @@ app.set("views", "./views");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser(process.env.SESSION_SECRET));
+console.log(process.env.SESSION_SECRET)
 
 db.defaults({ list: [] }).write();
 

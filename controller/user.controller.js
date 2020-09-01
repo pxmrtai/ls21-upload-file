@@ -31,9 +31,15 @@ module.exports.userLogin = (req,res)=>{
   
 }
 module.exports.index = (req,res)=>{
-  
+   var page = parseInt(req.query.page) || 1;
+    var perPage = 2;
+    var start = (page-1)*perPage;
+    var end = (page - 1)* perPage + perPage
   res.render('users/index',{
-    userList : db.get('user').value()
+   
+    n : 1,
+    // products: db.get('products').value().slice(start,end)
+    userList: db.get('user').drop(start).take(perPage).value()
   })
 }
 module.exports.view = (req,res)=>{
