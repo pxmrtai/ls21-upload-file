@@ -25,9 +25,13 @@ block navbar
       ul.pagination.justify-content-center
         div current page: #{currPage}
         div max page: #{maxPage}
-        if(firstPage > 1)
+        if(currPage > 1)
           li.page-item
             a.page-link(href='/users/index?page='+ --currPage) <<
+        while  n < maxPage
+          while n < 5
+            li.page-item
+              a.page-link(href='/users/index?page='+ n)= n++
         if(currPage + 1  < maxPage)
           li.page-item
             a.page-link(href='/users/index?page='+ ++currPage) >>
@@ -35,19 +39,6 @@ block navbar
 
   a(href="/" class="btn btn-primary" role="button") Menu List
   // em xóa tạm nhé? em thử làm nhé
-  // sao limit ít thế anh nhỉ :))
-  // free mà :v :))
-  // làm sao để nó dừng bh ạ?
-  // hừm sao nó bị mãi thế nhể
-  // 2 cái if else bạn bỏ ngoài while nhá :)) em xóa parseInt rồi ạ
-  // :v nó ra không phải số NaN kìa
-  //đâu ạ?
-  // nếu là string thì "1" + 1 = "11" :v 
-  // hừm để cho đơn gian mình nghĩ bạn nên tạm tắt while đi để << với >> thôi xem tăng lên xuống được không 
-  // rồi khi đó để while ren ra << 1 2 3 4 5 >> vấn đề là khi bạn bấm trang số 2 hoặc >> thì nó sẽ phải là như vầy << 2 3 4 5 6 >>
-  // đại loại vậy
-  // dạ.. ý em là vậy ạ :))
-  // each ns in n
-          li.page-item
-            a.page-link(href='/users/index?page='+ currPage)= ns++ 
-            // để đó đã
+  // lên xuống qua về có vẻ ổn rồi đó bạn 
+  // bây giờ bạn có thể dựa vào currPage với maxPage để while ra // dạ..không sao ạ... anh cứ thoải mái ạ..sr anh ạ >< 
+  // mình xin đi mua đồ 1 lát nha ^^ ... vọc vạch đi thí về mình xem cho ok ạ

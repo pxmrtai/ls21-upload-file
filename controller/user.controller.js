@@ -35,7 +35,7 @@ module.exports.index = (req, res) => {
   var maxPage =  Math.ceil(db.get("user").value().length / perPage);
   // mình lấy nhầm, lấy tổng số user có trong mảng / số user hiển hiện trên 1 trang.. ồ 
   res.render("users/index", {
-    n: [1,2,3,4,5,6,7,8,9],
+    n: 1,
     firstPage: page-2,
     currPage: page,
     maxPage,
@@ -58,6 +58,7 @@ module.exports.view = (req, res) => {
     user: user
   });
 };
+
 module.exports.delete = function(req, res) {
   db.get("user")
     .remove({ id: req.params.id })
