@@ -32,7 +32,10 @@ block navbar
         - maxleft = 1
         - maxRight = window
       if(maxRight)
-        - maxleft = 
+        - maxleft = maxPage - (windown - 1)
+        - maxRight = maxPage
+        if(maxleft < 1) 
+        - maxleft = 1
       ul.pagination.justify-content-center
     
         if(page > 1)
