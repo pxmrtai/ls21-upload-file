@@ -11,7 +11,7 @@ module.exports.rentalIndex = (req,res)=>{
   var perPage = 2;
   var start = (page - 1) * perPage;
   var end = (page - 1) * perPage + perPage;
-  var maxPage =  Math.ceil(db.get("user").value().length / perPage);
+  var maxPage =  Math.ceil(db.get("rentalList").value().length / perPage);
   res.render("transaction/index",{
       page,
     maxPage,
@@ -44,6 +44,5 @@ module.exports.postCreateRentalList = (req,res)=>{
 
 module.exports.getcomplete = (req, res) => {
   db.get('rentalList').find({id: req.params.id}).assign({isComplete: true}).write();
- 
   res.redirect('/transaction/index');
 };

@@ -1,7 +1,7 @@
 extends ../layouts/common 
 block headContent
 block navbar
-     h1 Rental List
+     h1 Rental List#{page}
      a.btn.btn-primary(href="/transaction/create") Create New Transactions
      table.table.mt-3
        tr
@@ -22,7 +22,8 @@ block navbar
                       else
                         span Renting
                          span.ml-5
-                          a.btn.btn-danger(href='/transaction/' + item.id + '/complete') Completenav(aria-label="Page navigation example")
+                          a.btn.btn-danger(href='/transaction/' + item.id + '/complete') Complete
+     nav(aria-label="Page navigation example")
         - var previous = page - 1
         - var next = page + 1
         - var window = 5
@@ -43,15 +44,15 @@ block navbar
           - var currPage = maxleft
           if(page > 1)
             li.page-item
-              a.page-link(href='/users/index?page='+ previous) <<
+              a.page-link(href='/transaction/index?page='+ previous) <<
           while currPage <= maxRight
             li.page-item
-              a.page-link(href='/users/index?page='+ currPage)= currPage
+              a.page-link(href='/transaction/index?page='+ currPage)= currPage
               - currPage = currPage + 1 
           if(next <= maxPage)
             li.page-item
-              a.page-link(href='/users/index?page='+ next) >>
-   a(href="/" class="btn btn-primary" role="button") Menu List        
+              a.page-link(href='/transaction/index?page='+ next) >>
+     a(href="/" class="btn btn-primary" role="button") Menu List        
 
           
             
