@@ -22,17 +22,16 @@ block navbar
         td
           a(href="/users/index/" + user.id+"/delete") delete
   .nav(aria-label="Page navigation example")
+      div current page: #{currPage}
+      div max page: #{maxPage}
       ul.pagination.justify-content-center
-        div current page: #{currPage}
-        div max page: #{maxPage}
-        div current page: #{prePage}
-        div max page: #{nextPage}
         if(currPage > 1)
           li.page-item
             a.page-link(href='/users/index?page='+ --currPage) <<
-        each item in all
+        while page < maxPage +1
+          if(page > currPage + 5)
             li.page-item
-              a.page-link(href='/users/index?page='+ n)= all.[index]
+              a.page-link(href='/users/index?page='+ page)= page++
         if(currPage + 1  < maxPage)
           li.page-item
             a.page-link(href='/users/index?page='+ ++currPage) >>
@@ -43,3 +42,8 @@ block navbar
   // lên xuống qua về có vẻ ổn rồi đó bạn 
   // bây giờ bạn có thể dựa vào currPage với maxPage để while ra // dạ..không sao ạ... anh cứ thoải mái ạ..sr anh ạ >< 
   // mình xin đi mua đồ 1 lát nha ^^ ... vọc vạch đi thí về mình xem cho ok ạ
+  // bạn review mình bên kia đi 
+  // để lâu quá hệ thống nó tưởng mình không rep tin nhắn học viên @@ dạ :)) em nghĩ mãi k ra :(
+  // hừm currPage , nó lại limit rồi 
+  // em tưởng max page + 1 nhỉ  dạ..mình có 8 page mừ..
+  // huh ? cái iff >> là so sánh xem cái page tiếp theo có là page cuối không 
