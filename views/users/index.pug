@@ -2,7 +2,7 @@ extends ../layouts/common
 block headContent
 block navbar
 
-  h1 User List #{currPage}
+  h1 User List
   
 
   table.table
@@ -22,23 +22,23 @@ block navbar
         td
           a(href="/users/index/" + user.id+"/delete") delete
   .nav(aria-label="Page navigation example")
-      div current page: #{currPage}
-      div max page: #{maxPage}
       ul.pagination.justify-content-center
+        div current page: #{currPage}
+        div max page: #{maxPage}
         if(currPage > 1)
           li.page-item
             a.page-link(href='/users/index?page='+ --currPage) <<
+        while  n < maxPage
+          while n < 5
+            li.page-item
+              a.page-link(href='/users/index?page='+ n)= n++
         if(currPage + 1  < maxPage)
           li.page-item
             a.page-link(href='/users/index?page='+ ++currPage) >>
 
 
   a(href="/" class="btn btn-primary" role="button") Menu List
-
-      // chắc là do while loop vô hạn ạ
-      // ui chết :v 
-      // chậc đoạn này không có for cái dùng while mệt nhỉ 
-      // um ~ mình cũng xem đây
-      //https://pugjs.org/language/iteration.html anh xem trang này có for k ạ
-      // hừm mình ngồi làm cái này 1 xí nha 
-      // xong rồi mình ngồi giải thích lại ... dạ..
+  // em xóa tạm nhé? em thử làm nhé
+  // lên xuống qua về có vẻ ổn rồi đó bạn 
+  // bây giờ bạn có thể dựa vào currPage với maxPage để while ra // dạ..không sao ạ... anh cứ thoải mái ạ..sr anh ạ >< 
+  // mình xin đi mua đồ 1 lát nha ^^ ... vọc vạch đi thí về mình xem cho ok ạ
