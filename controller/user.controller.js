@@ -33,10 +33,7 @@ module.exports.index = (req, res) => {
   var start = (page - 1) * perPage;
   var end = (page - 1) * perPage + perPage;
   var maxPage =  Math.ceil(db.get("user").value().length / perPage);
-  // mình lấy nhầm, lấy tổng số user có trong mảng / số user hiển hiện trên 1 trang.. ồ 
   res.render("users/index", {
-    n: 1,
-    firstPage: page-2,
     currPage: page,
     maxPage,
     // products: db.get('products').value().slice(start,end)
