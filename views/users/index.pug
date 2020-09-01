@@ -23,15 +23,20 @@ block navbar
           a(href="/users/index/" + user.id+"/delete") delete
   .nav(aria-label="Page navigation example")
       ul.pagination.justify-content-center
-        // xet dieu kien o day neu la cai dau tien aka page=1 thi khong sau ra cai the 
-        if(currPage > 1)
+        if(currPage = 1)
           li.page-item
             a.page-link(href='/users/index?page='+ currPage-1) "<<"
-          while n < 20
+          // hừm ở đây mình không dùng + thẳng vậy được nhỉ 
+          // không biết có nên tạo ra 1 biến không  ?? kiểu ... tạo biến trên pug sao ta ?
+          // tạo biến để làm gì vậy ạ?
+          // nếu không thì làm sao bạn check được điều kiện ở đoạn này  kiểu for currPage + i < currPage + 5 // pug có for không nhỉ :v sr nhà mình lâu quá không dùng pug nên không nhớ nữa
+          //ui! không sao anh ạ... mình có thể tạo biến bên trong auth.controller.js rồi vứt vào đc ạ.. em tạo cái currPage đó? pug cũng 
+          // app quá tải nên nó dừng rồi
+          while currPage + 5
               li.page-item
-                  a.page-link(href='/users/index?page='+ n)= n++
+                  a.page-link(href='/users/index?page='+ currPage)= currPage++ 
         // tương tự với last
-        if((currPage + 5) > lastPage)
+        if((currPage + 5) )
           li.page-item
                   a.page-link(href='/users/index?page='+ currPage+1) ">>"
           
@@ -54,7 +59,9 @@ block navbar
   // bạn muốn show ra 5 trang thì ở chỗ while bạn cũng có thể dùng currPage + 5 rồi loop ra 5 cái thẻ  li
   // currpage thì bạn có thể lấy = cách req.query.page rồi ném ra cho file index.pug là được á 
   // bạn có câu hỏi gì không ?
-  // ở trên mình chỉ viết ý tưởng thôi nha 
+  // ở trên mình chỉ viết ý tưởng thôi nha
+  // bạn cứ làm đi 
+  // mình ngồi xem cũng được 
    
           // dạ em muốn hiện chỉ có 5 ô.. vd có 20 ô ở đây..tất cả đều có dữ liệu..tại list em nó ngắn.
           //mỗi page chỉ hiện 5 pagination thôi ạ... của em đang bị hiện tất cả 20 cái ạ
@@ -65,5 +72,5 @@ block navbar
           //dạ. hem ạ :)) cái 1,2,3,4,5,6,7,8,9,10 các kiểu ý ạ :)) dạ đúng rồi ạ
           // dạ. anh cứ take time thôi ạ ><
           // em vẫn đang xem ạ..
-          //dạ dạ... em hiểu rồi ạ để em làm thứ ạ.. em cảm ơn anh ạ..
+          //dạ dạ... em hiểu rồi ạ để em làm thứ ạ.. em cảm ơn anh ạ..dạ
           
