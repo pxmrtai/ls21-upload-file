@@ -31,18 +31,24 @@ block navbar
       if(maxleft < 1) 
         - maxleft = 1
         - maxRight = window
-      if(maxRight)
+      if(maxRight > maxPage)
         - maxleft = maxPage - (windown - 1)
         - maxRight = maxPage
         if(maxleft < 1) 
         - maxleft = 1
       ul.pagination.justify-content-center
-    
+        - var currPage = maxleft
+        div maxLeft: #{maxleft}
+        div maxRight: #{maxRight}
         if(page > 1)
           li.page-item
             a.page-link(href='/users/index?page='+ previous) <<
-        
-        if(next < maxPage)
+        while currPage < maxRight
+          li.page-item
+            a.page-link(href='/users/index?page='+ currPage)= currPage 
+            div #{currPage}
+          - currPage = currPage + 1
+        if(next <= maxPage)
           li.page-item
             a.page-link(href='/users/index?page='+ next) >>
 
