@@ -23,13 +23,10 @@ block navbar
           a(href="/users/index/" + user.id+"/delete") delete
   .nav(aria-label="Page navigation example")
       ul.pagination.justify-content-center
-        if(currPage = 1)
+        if(currPage > 1)
           li.page-item
-            a.page-link(href='/users/index?page='+ currPage-1) "<<"
-        while n < 10
-          li.page-item
-            a.page-link(href='/users/index?page='+ currPage)= n++ 
-        if((currPage + 5) )
+            a.page-link(href='/users/index?page='+ currPage-1) <<
+        if(currPage + 1  < maxPage)
           li.page-item
             a.page-link(href='/users/index?page='+ currPage+1) >>
 
@@ -44,3 +41,11 @@ block navbar
   // :v nó ra không phải số NaN kìa
   //đâu ạ?
   // nếu là string thì "1" + 1 = "11" :v 
+  // hừm để cho đơn gian mình nghĩ bạn nên tạm tắt while đi để << với >> thôi xem tăng lên xuống được không 
+  // rồi khi đó để while ren ra << 1 2 3 4 5 >> vấn đề là khi bạn bấm trang số 2 hoặc >> thì nó sẽ phải là như vầy << 2 3 4 5 6 >>
+  // đại loại vậy
+  // dạ.. ý em là vậy ạ :))
+  // each ns in n
+          li.page-item
+            a.page-link(href='/users/index?page='+ currPage)= ns++ 
+            // để đó đã

@@ -33,8 +33,9 @@ module.exports.index = (req, res) => {
   var start = (page - 1) * perPage;
   var end = (page - 1) * perPage + perPage;
   res.render("users/index", {
-    n: 1,
-    currPage: parseInt(req.query.page),
+    n: [1,2,3,4,5,6,7,8,9],
+    currPage: page,
+    maxPage:  end,
     // products: db.get('products').value().slice(start,end)
     userList: db
       .get("user")
