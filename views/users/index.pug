@@ -30,7 +30,7 @@ block navbar
             a.page-link(href='/users/index?page='+ --currPage) <<
         if(currPage + 1  < maxPage)
           li.page-item
-            a.page-link(href='/users/index?page='+ currPage+=1) >>
+            a.page-link(href='/users/index?page='+ ++currPage) >>
 
 
   a(href="/" class="btn btn-primary" role="button") Menu List

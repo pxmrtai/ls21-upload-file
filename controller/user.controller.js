@@ -41,7 +41,7 @@ module.exports.index = (req, res) => {
     
     currPage : page,
     page,
-    prePage,
+    // prePage,
     maxPage,
     // products: db.get('products').value().slice(start,end)
     userList: db
