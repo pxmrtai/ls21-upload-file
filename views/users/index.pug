@@ -28,11 +28,7 @@ block navbar
         if(currPage > 1)
           li.page-item
             a.page-link(href='/users/index?page='+ --currPage) <<
-        while  n < maxPage
-          while n < 5
-            li.page-item
-              a.page-link(href='/users/index?page='+ n)= n++
-        if(currPage + 1  < maxPage)
+        if(currPage + 1 < maxPage)
           li.page-item
             a.page-link(href='/users/index?page='+ ++currPage) >>
 
