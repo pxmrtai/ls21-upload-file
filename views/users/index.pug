@@ -28,14 +28,9 @@ block navbar
         if(currPage > 1)
           li.page-item
             a.page-link(href='/users/index?page='+ --currPage) <<
-        - var count = 1
-        div page: #{page}
-        while page < maxPage || count > 1
-          li.page-item
-            a.page-link(href='/users/index?page='+ page)= page++
         if(currPage + 1  < maxPage)
           li.page-item
-            a.page-link(href='/users/index?page='+ ++currPage) >>
+            a.page-link(href='/users/index?page='+ currPage+=1) >>
 
 
   a(href="/" class="btn btn-primary" role="button") Menu List
@@ -45,3 +40,5 @@ block navbar
       // chậc đoạn này không có for cái dùng while mệt nhỉ 
       // um ~ mình cũng xem đây
       //https://pugjs.org/language/iteration.html anh xem trang này có for k ạ
+      // hừm mình ngồi làm cái này 1 xí nha 
+      // xong rồi mình ngồi giải thích lại ... dạ..
