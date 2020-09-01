@@ -28,22 +28,20 @@ block navbar
         if(currPage > 1)
           li.page-item
             a.page-link(href='/users/index?page='+ --currPage) <<
-        while page < maxPage +1
-          if(page > currPage + 5)
-            li.page-item
-              a.page-link(href='/users/index?page='+ page)= page++
+        - var count = 1
+        div page: #{page}
+        while page < maxPage || count > 1
+          li.page-item
+            a.page-link(href='/users/index?page='+ page)= page++
         if(currPage + 1  < maxPage)
           li.page-item
             a.page-link(href='/users/index?page='+ ++currPage) >>
 
 
   a(href="/" class="btn btn-primary" role="button") Menu List
-  // em xóa tạm nhé? em thử làm nhé
-  // lên xuống qua về có vẻ ổn rồi đó bạn 
-  // bây giờ bạn có thể dựa vào currPage với maxPage để while ra // dạ..không sao ạ... anh cứ thoải mái ạ..sr anh ạ >< 
-  // mình xin đi mua đồ 1 lát nha ^^ ... vọc vạch đi thí về mình xem cho ok ạ
-  // bạn review mình bên kia đi 
-  // để lâu quá hệ thống nó tưởng mình không rep tin nhắn học viên @@ dạ :)) em nghĩ mãi k ra :(
-  // hừm currPage , nó lại limit rồi 
-  // em tưởng max page + 1 nhỉ  dạ..mình có 8 page mừ..
-  // huh ? cái iff >> là so sánh xem cái page tiếp theo có là page cuối không 
+
+      // chắc là do while loop vô hạn ạ
+      // ui chết :v 
+      // chậc đoạn này không có for cái dùng while mệt nhỉ 
+      // um ~ mình cũng xem đây
+      //https://pugjs.org/language/iteration.html anh xem trang này có for k ạ
