@@ -23,16 +23,18 @@ block navbar
           a(href="/users/index/" + user.id+"/delete") delete
   .nav(aria-label="Page navigation example")
       ul.pagination.justify-content-center
-        if(currPage > 1)
+        div current page: #{currPage}
+        div max page: #{maxPage}
+        if(firstPage > 1)
           li.page-item
-            a.page-link(href='/users/index?page='+ currPage-1) <<
+            a.page-link(href='/users/index?page='+ --currPage) <<
         if(currPage + 1  < maxPage)
           li.page-item
-            a.page-link(href='/users/index?page='+ currPage+1) >>
+            a.page-link(href='/users/index?page='+ ++currPage) >>
 
 
   a(href="/" class="btn btn-primary" role="button") Menu List
-  // em xóa tạm nhé?
+  // em xóa tạm nhé? em thử làm nhé
   // sao limit ít thế anh nhỉ :))
   // free mà :v :))
   // làm sao để nó dừng bh ạ?
