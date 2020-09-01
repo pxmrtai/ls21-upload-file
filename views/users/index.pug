@@ -2,7 +2,7 @@ extends ../layouts/common
 block headContent
 block navbar
 
-  h1 User List
+  h1 User List #{currPage}
   
 
   table.table
@@ -25,13 +25,14 @@ block navbar
       ul.pagination.justify-content-center
         div current page: #{currPage}
         div max page: #{maxPage}
+        div current page: #{prePage}
+        div max page: #{nextPage}
         if(currPage > 1)
           li.page-item
             a.page-link(href='/users/index?page='+ --currPage) <<
-        while  n < maxPage
-          while n < 5
+        each item in all
             li.page-item
-              a.page-link(href='/users/index?page='+ n)= n++
+              a.page-link(href='/users/index?page='+ n)= all.[index]
         if(currPage + 1  < maxPage)
           li.page-item
             a.page-link(href='/users/index?page='+ ++currPage) >>
