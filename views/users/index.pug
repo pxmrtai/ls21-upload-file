@@ -25,7 +25,7 @@ block navbar
   .nav(aria-label="Page navigation example")
       - var previous = page - 1
       - var next = page + 1
-      - var window = 5
+      - var window = 3
       - var maxleft = (page - Math.floor(window / 2))
       - var maxRight = (page + Math.floor(window / 2))
       
@@ -36,13 +36,22 @@ block navbar
       if(maxRight > maxPage)
         - maxleft = (maxPage - (window - 1))
         - maxRight = maxPage
-        if(maxleft < 1) 
+        div Bruh: #{maxRight}
+        div Blef: left = #{maxleft} right? - return 4 <-
+        
+        if(maxleft < 1) // 4 < 1 => true ?? :D ?? i so confuse:)) 4>1 => true? 1<4 => true so 4<1 => false
         - maxleft = 1
+        div Blef2: #{maxleft}
+        div cuz left equal 1, idk why, maybe becuz of thiz i guess, "4" < 1 am i right? // i cant check type of maxleft just though it was string
+        // maybe? well I thought cant compare string with number? well.. page is number.. max= page-1 so I think it is a number
+        
       
       ul.pagination.justify-content-center
         - var currPage = maxleft
-        div maxLeft: #{maxleft}
+        
         div maxRight: #{maxRight}
+        div maxLeft: #{maxleft}
+        div currPage: #{currPage}
         if(page > 1)
           li.page-item
             a.page-link(href='/users/index?page='+ previous) <<
@@ -50,7 +59,7 @@ block navbar
           li.page-item
             a.page-link(href='/users/index?page='+ currPage)= currPage 
             div #{currPage}
-          - currPage = currPage + 1
+          - currPage = currPage + 1 
         if(next <= maxPage)
           li.page-item
             a.page-link(href='/users/index?page='+ next) >>
@@ -61,3 +70,10 @@ block navbar
   // lên xuống qua về có vẻ ổn rồi đó bạn 
   // bây giờ bạn có thể dựa vào currPage với maxPage để while ra // dạ..không sao ạ... anh cứ thoải mái ạ..sr anh ạ >< 
   // mình xin đi mua đồ 1 lát nha ^^ ... vọc vạch đi thí về mình xem cho ok ạ
+  // bạn còn đó không 
+  // nãy giờ mình đi thăm ngàn
+  // làm lâu quá :))
+  // cơ bàn là được rồi đó 
+  // có thể test 
+  // chỉ có cái là tới cái cuối không biết sao không tín hra được 
+  // dạ không sao ạ.. dạ em thấy rồi ạ.. tới cái cuối là nó lại hiện hết
