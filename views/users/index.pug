@@ -26,51 +26,21 @@ block navbar
         if(currPage = 1)
           li.page-item
             a.page-link(href='/users/index?page='+ currPage-1) "<<"
-          // hừm ở đây mình không dùng + thẳng vậy được nhỉ 
-          // không biết có nên tạo ra 1 biến không  ?? kiểu ... tạo biến trên pug sao ta ?
-          // tạo biến để làm gì vậy ạ?
-          // nếu không thì làm sao bạn check được điều kiện ở đoạn này  kiểu for currPage + i < currPage + 5 // pug có for không nhỉ :v sr nhà mình lâu quá không dùng pug nên không nhớ nữa
-          //ui! không sao anh ạ... mình có thể tạo biến bên trong auth.controller.js rồi vứt vào đc ạ.. em tạo cái currPage đó? pug cũng 
-          // app quá tải nên nó dừng rồi
-          while currPage + 5
-              li.page-item
-                  a.page-link(href='/users/index?page='+ currPage)= currPage++ 
-        // tương tự với last
+        while n < 10
+          li.page-item
+            a.page-link(href='/users/index?page='+ currPage)= n++ 
         if((currPage + 5) )
           li.page-item
-                  a.page-link(href='/users/index?page='+ currPage+1) ">>"
-          
+            a.page-link(href='/users/index?page='+ currPage+1) >>
+
 
   a(href="/" class="btn btn-primary" role="button") Menu List
-   // bạn ở đây phải không dạ
-   // ở đây bạn có cho nó + n nè 
-   // à mình xem qua code xí
-   // bạn cứ nói đi
-   // oh ~ có tài khoản không cho mình vào xem với 
-   // thì đầu tiền thì bạn phải lấy được tổng số trang
-   // thì hiện tại bạn đang show 2 record mỗi trang 
-   // bạn tăng số record lên 5 ?
-   // à hiển thị ở dưới kiểu này << 1 2 3 4 5 >>
-   // :v cái này bên giao diện đợi mình xí nhá 
-   // alo bạn ơi
-   // ý tưởng của mình như vậy 
-   // kiểm tra đầu đuôi để show ra << or >>
-  // rồi có thể dựa theo currPage bạn có thể lên xuống 
-  // bạn muốn show ra 5 trang thì ở chỗ while bạn cũng có thể dùng currPage + 5 rồi loop ra 5 cái thẻ  li
-  // currpage thì bạn có thể lấy = cách req.query.page rồi ném ra cho file index.pug là được á 
-  // bạn có câu hỏi gì không ?
-  // ở trên mình chỉ viết ý tưởng thôi nha
-  // bạn cứ làm đi 
-  // mình ngồi xem cũng được 
-   
-          // dạ em muốn hiện chỉ có 5 ô.. vd có 20 ô ở đây..tất cả đều có dữ liệu..tại list em nó ngắn.
-          //mỗi page chỉ hiện 5 pagination thôi ạ... của em đang bị hiện tất cả 20 cái ạ
-          // em muốn có tổng cộng 20 trang.. nhưng chỉ muốn hiện 5 trang..
-          //làm sao khi click vào một trang.. các trang sau chỉ hiện +-2 đơn vị ạ
-          // pxmrtai97@gmail.com, 123123
-          // em đang làm cái user list ý ạ
-          //dạ. hem ạ :)) cái 1,2,3,4,5,6,7,8,9,10 các kiểu ý ạ :)) dạ đúng rồi ạ
-          // dạ. anh cứ take time thôi ạ ><
-          // em vẫn đang xem ạ..
-          //dạ dạ... em hiểu rồi ạ để em làm thứ ạ.. em cảm ơn anh ạ..dạ
-          
+  // em xóa tạm nhé?
+  // sao limit ít thế anh nhỉ :))
+  // free mà :v :))
+  // làm sao để nó dừng bh ạ?
+  // hừm sao nó bị mãi thế nhể
+  // 2 cái if else bạn bỏ ngoài while nhá :)) em xóa parseInt rồi ạ
+  // :v nó ra không phải số NaN kìa
+  //đâu ạ?
+  // nếu là string thì "1" + 1 = "11" :v 
