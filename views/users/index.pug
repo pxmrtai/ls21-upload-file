@@ -3,7 +3,7 @@ block headContent
 block navbar
 
   h1 User List
-  div current page: #{currPage}
+  div current page: #{page}
   div max page: #{maxPage}
 
   table.table
@@ -23,14 +23,25 @@ block navbar
         td
           a(href="/users/index/" + user.id+"/delete") delete
   .nav(aria-label="Page navigation example")
+      - var previous = page - 1
+      - var next = page + 1
+      - var window = 5
+      - var maxleft = (page - Math.floor(window / 2))
+      - var maxRight = (page + Math.floor(window / 2))
+      if(maxleft < 1) 
+        - maxleft = 1
+        - maxRight = window
+      if(maxRight)
+        - maxleft = 
       ul.pagination.justify-content-center
-
-        if(currPage > 1)
+    
+        if(page > 1)
           li.page-item
-            a.page-link(href='/users/index?page='+ --currPage) <<
-        if(currPage + 1 < maxPage)
+            a.page-link(href='/users/index?page='+ previous) <<
+        
+        if(next < maxPage)
           li.page-item
-            a.page-link(href='/users/index?page='+ ++currPage) >>
+            a.page-link(href='/users/index?page='+ next) >>
 
 
   a(href="/" class="btn btn-primary" role="button") Menu List
