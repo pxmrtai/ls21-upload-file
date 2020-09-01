@@ -28,14 +28,17 @@ block navbar
       - var window = 5
       - var maxleft = (page - Math.floor(window / 2))
       - var maxRight = (page + Math.floor(window / 2))
+      
       if(maxleft < 1) 
         - maxleft = 1
         - maxRight = window
+      
       if(maxRight > maxPage)
-        - maxleft = maxPage - (windown - 1)
+        - maxleft = (maxPage - (window - 1))
         - maxRight = maxPage
         if(maxleft < 1) 
         - maxleft = 1
+      
       ul.pagination.justify-content-center
         - var currPage = maxleft
         div maxLeft: #{maxleft}
@@ -43,7 +46,7 @@ block navbar
         if(page > 1)
           li.page-item
             a.page-link(href='/users/index?page='+ previous) <<
-        while currPage < maxRight
+        while currPage <= maxRight
           li.page-item
             a.page-link(href='/users/index?page='+ currPage)= currPage 
             div #{currPage}
