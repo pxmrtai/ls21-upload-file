@@ -21,15 +21,20 @@ block navbar
           a(href="/users/" + user.id) view 
         td
           a(href="/users/index/" + user.id+"/delete") delete
-   .nav(aria-label="Page navigation example")
-        ul.pagination.justify-content-center
-            while n < 20
-                li.page-item
-                    a.page-link(href='/users?page='+ n)= n++
+  .nav(aria-label="Page navigation example")
+      ul.pagination.justify-content-center
+          while n < 20
+              li.page-item
+                  a.page-link(href='/users/index?page='+ n)= n++
 
   a(href="/" class="btn btn-primary" role="button") Menu List
+   // bạn ở đây phải không dạ
+   // ở đây bạn có cho nó + n nè 
+   // à mình xem qua code xí
+   // bạn cứ nói đi
    
    
-   
-   
-          
+          // dạ em muốn hiện chỉ có 5 ô.. vd có 20 ô ở đây..tất cả đều có dữ liệu..tại list em nó ngắn.
+          //mỗi page chỉ hiện 5 pagination thôi ạ... của em đang bị hiện tất cả 20 cái ạ
+          // em muốn có tổng cộng 20 trang.. nhưng chỉ muốn hiện 5 trang..
+          //làm sao khi click vào một trang
