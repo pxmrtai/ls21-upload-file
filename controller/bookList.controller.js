@@ -2,14 +2,23 @@ const db = require('../db')
 const shortid = require('shortid')
 
 module.exports.index = (req,res) => {
-    res.render('index',{
-       list : db.get('list').value()
-    })
+   res.render('index')
 }
 module.exports.listBook = (req,res)=>{               
-    res.render('book',{
-       list : db.get('list').value()
-    })
+    var page = parseInt(req.query.page) || 1;
+  var perPage = 2;
+  var start = (page - 1) * perPage;
+  var end = (page - 1) * perPage + perPage;
+  var maxPage =  Math.ceil(db.get("list").value().length / perPage);
+  res.render("book",{
+      page,
+    maxPage,
+    list: db
+      .get("list")
+      .drop(start)
+      .take(perPage)
+      .value()
+  })
 }
 module.exports.view = (req,res)=>{
     var id = req.params.id;
