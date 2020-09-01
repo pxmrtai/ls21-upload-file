@@ -23,18 +23,47 @@ block navbar
           a(href="/users/index/" + user.id+"/delete") delete
   .nav(aria-label="Page navigation example")
       ul.pagination.justify-content-center
+        // xet dieu kien o day neu la cai dau tien aka page=1 thi khong sau ra cai the 
+        if(currPage > 1)
+          li.page-item
+            a.page-link(href='/users/index?page='+ currPage-1) "<<"
           while n < 20
               li.page-item
                   a.page-link(href='/users/index?page='+ n)= n++
+        // tương tự với last
+        if((currPage + 5) > lastPage)
+          li.page-item
+                  a.page-link(href='/users/index?page='+ currPage+1) ">>"
+          
 
   a(href="/" class="btn btn-primary" role="button") Menu List
    // bạn ở đây phải không dạ
    // ở đây bạn có cho nó + n nè 
    // à mình xem qua code xí
    // bạn cứ nói đi
-   
+   // oh ~ có tài khoản không cho mình vào xem với 
+   // thì đầu tiền thì bạn phải lấy được tổng số trang
+   // thì hiện tại bạn đang show 2 record mỗi trang 
+   // bạn tăng số record lên 5 ?
+   // à hiển thị ở dưới kiểu này << 1 2 3 4 5 >>
+   // :v cái này bên giao diện đợi mình xí nhá 
+   // alo bạn ơi
+   // ý tưởng của mình như vậy 
+   // kiểm tra đầu đuôi để show ra << or >>
+  // rồi có thể dựa theo currPage bạn có thể lên xuống 
+  // bạn muốn show ra 5 trang thì ở chỗ while bạn cũng có thể dùng currPage + 5 rồi loop ra 5 cái thẻ  li
+  // currpage thì bạn có thể lấy = cách req.query.page rồi ném ra cho file index.pug là được á 
+  // bạn có câu hỏi gì không ?
+  // ở trên mình chỉ viết ý tưởng thôi nha 
    
           // dạ em muốn hiện chỉ có 5 ô.. vd có 20 ô ở đây..tất cả đều có dữ liệu..tại list em nó ngắn.
           //mỗi page chỉ hiện 5 pagination thôi ạ... của em đang bị hiện tất cả 20 cái ạ
           // em muốn có tổng cộng 20 trang.. nhưng chỉ muốn hiện 5 trang..
-          //làm sao khi click vào một trang
+          //làm sao khi click vào một trang.. các trang sau chỉ hiện +-2 đơn vị ạ
+          // pxmrtai97@gmail.com, 123123
+          // em đang làm cái user list ý ạ
+          //dạ. hem ạ :)) cái 1,2,3,4,5,6,7,8,9,10 các kiểu ý ạ :)) dạ đúng rồi ạ
+          // dạ. anh cứ take time thôi ạ ><
+          // em vẫn đang xem ạ..
+          //dạ dạ... em hiểu rồi ạ để em làm thứ ạ.. em cảm ơn anh ạ..
+          
